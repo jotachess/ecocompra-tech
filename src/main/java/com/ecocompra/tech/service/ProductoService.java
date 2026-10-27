@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import com.ecocompra.tech.dto.ProductoDto;
-import com.ecocompra.tech.model.Producto;
+import com.ecocompra.tech.entity.Producto;
 
 public interface ProductoService {
 

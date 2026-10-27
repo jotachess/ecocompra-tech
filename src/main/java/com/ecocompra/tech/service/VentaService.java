@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 import com.ecocompra.tech.dto.VentaRequestDto;
-import com.ecocompra.tech.model.Venta;
+import com.ecocompra.tech.entity.Venta;
 
 public interface VentaService {
 

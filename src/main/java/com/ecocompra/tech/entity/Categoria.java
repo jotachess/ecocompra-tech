@@ -1,4 +1,4 @@
-package com.ecocompra.tech.model;
+package com.ecocompra.tech.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -50,7 +50,7 @@ public class Categoria implements Serializable {
     private String descripcion;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = false)
+    @OneToMany(mappedBy = "categoria")
     @Builder.Default
     private List<Producto> productos = new ArrayList<>();
 }

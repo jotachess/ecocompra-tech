@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ecocompra.tech.dto.CategoriaDto;
 import com.ecocompra.tech.exception.IllegalOperationException;
 import com.ecocompra.tech.exception.ResourceNotFoundException;
-import com.ecocompra.tech.model.Categoria;
+import com.ecocompra.tech.entity.Categoria;
 import com.ecocompra.tech.repository.CategoriaRepository;
 import com.ecocompra.tech.repository.ProductoRepository;
 import com.ecocompra.tech.service.CategoriaService;

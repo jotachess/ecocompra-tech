@@ -22,8 +22,8 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import com.ecocompra.tech.dto.CategoriaDto;
 import com.ecocompra.tech.dto.ProductoDto;
 import com.ecocompra.tech.exception.ResourceNotFoundException;
-import com.ecocompra.tech.model.Categoria;
-import com.ecocompra.tech.model.Producto;
+import com.ecocompra.tech.entity.Categoria;
+import com.ecocompra.tech.entity.Producto;
 import com.ecocompra.tech.service.CategoriaService;
 
 @SpringBootTest

@@ -8,7 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ecocompra.tech.dto.ClienteDto;
 import com.ecocompra.tech.exception.IllegalOperationException;
 import com.ecocompra.tech.exception.ResourceNotFoundException;
-import com.ecocompra.tech.model.Cliente;
+import com.ecocompra.tech.entity.Cliente;
 import com.ecocompra.tech.repository.ClienteRepository;
 import com.ecocompra.tech.repository.VentaRepository;
 import com.ecocompra.tech.service.ClienteService;
@@ -38,6 +38,9 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Cliente crear(ClienteDto dto) {
+        if (dto.getIdCliente() != null) {
+            throw new IllegalArgumentException("No se permite enviar un ID al crear un cliente");
+        }
         if (dto.getCorreo() != null && !dto.getCorreo().isBlank()) {
             String correoLimpio = dto.getCorreo().trim();
             if (clienteRepository.existsByCorreoIgnoreCase(correoLimpio)) {

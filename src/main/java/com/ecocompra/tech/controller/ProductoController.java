@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ecocompra.tech.dto.ProductoDto;
-import com.ecocompra.tech.model.Producto;
+import com.ecocompra.tech.entity.Producto;
 import com.ecocompra.tech.service.ProductoService;
 
 import jakarta.validation.Valid;

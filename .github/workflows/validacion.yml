@@ -1,0 +1,61 @@
+name: Validacion de persistencia
+
+on:
+  pull_request:
+  push:
+    branches: [main, feature/actividad-02, feature/repositorios-diana]
+
+permissions:
+  contents: read
+
+jobs:
+  h2:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Compilar, probar y empaquetar con H2
+        run: bash mvnw -B clean verify
+
+  mysql:
+    runs-on: ubuntu-latest
+    services:
+      mysql:
+        image: mysql:8.4
+        env:
+          # Credencial exclusiva de la instancia desechable de CI.
+          MYSQL_ROOT_PASSWORD: ecocompra-ci-only
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: maven
+      - name: Crear el esquema real y un usuario limitado de pruebas
+        env:
+          MYSQL_CONTAINER_ID: ${{ job.services.mysql.id }}
+          MYSQL_PWD: ecocompra-ci-only
+        run: |
+          docker exec -i -e MYSQL_PWD "$MYSQL_CONTAINER_ID" mysql -uroot < docs/sql/01-esquema.sql
+          docker exec -i -e MYSQL_PWD "$MYSQL_CONTAINER_ID" mysql -uroot <<'SQL'
+          CREATE USER 'ecocompra_ci'@'%' IDENTIFIED BY 'ci-only';
+          GRANT SELECT, INSERT, UPDATE, DELETE ON ecocompra_tech.* TO 'ecocompra_ci'@'%';
+          SQL
+      - name: Ejecutar la suite contra MySQL 8.4
+        env:
+          TEST_MYSQL_URL: jdbc:mysql://127.0.0.1:3306/ecocompra_tech?sslMode=REQUIRED&serverTimezone=UTC
+          TEST_MYSQL_USER: ecocompra_ci
+          TEST_MYSQL_PASSWORD: ci-only
+        run: bash mvnw -B -Dspring.profiles.active=mysql verify

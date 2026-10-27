@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Digits;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -24,5 +25,6 @@ public class DetalleVentaRequestDto {
     private Integer cantidad;
 
     @DecimalMin(value = "0.00", inclusive = true, message = "El precio unitario no puede ser negativo")
+    @Digits(integer = 8, fraction = 2)
     private BigDecimal precioUnitario; // Opcional en el request: si es nulo, el servicio toma el precio actual del producto
 }

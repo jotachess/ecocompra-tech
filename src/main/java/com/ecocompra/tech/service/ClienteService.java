@@ -3,7 +3,7 @@ package com.ecocompra.tech.service;
 import java.util.List;
 
 import com.ecocompra.tech.dto.ClienteDto;
-import com.ecocompra.tech.model.Cliente;
+import com.ecocompra.tech.entity.Cliente;
 
 public interface ClienteService {
 

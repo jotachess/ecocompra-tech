@@ -11,6 +11,11 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.web.bind.MissingServletRequestParameterException;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.springframework.web.HttpRequestMethodNotSupportedException;
+import org.springframework.web.HttpMediaTypeNotSupportedException;
 
 import com.ecocompra.tech.dto.ErrorResponseDto;
 
@@ -18,6 +23,35 @@ import jakarta.servlet.http.HttpServletRequest;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler({HttpMessageNotReadableException.class,
+            MissingServletRequestParameterException.class,
+            MethodArgumentTypeMismatchException.class})
+    public ResponseEntity<ErrorResponseDto> manejarSolicitudInvalida(
+            Exception ex, HttpServletRequest request) {
+        return errorHttp(HttpStatus.BAD_REQUEST,
+                "Revise el formato JSON y los parámetros obligatorios de la solicitud.", request);
+    }
+
+    @ExceptionHandler(HttpRequestMethodNotSupportedException.class)
+    public ResponseEntity<ErrorResponseDto> manejarMetodoNoPermitido(
+            HttpRequestMethodNotSupportedException ex, HttpServletRequest request) {
+        return errorHttp(HttpStatus.METHOD_NOT_ALLOWED, "Método HTTP no permitido.", request);
+    }
+
+    @ExceptionHandler(HttpMediaTypeNotSupportedException.class)
+    public ResponseEntity<ErrorResponseDto> manejarTipoNoSoportado(
+            HttpMediaTypeNotSupportedException ex, HttpServletRequest request) {
+        return errorHttp(HttpStatus.UNSUPPORTED_MEDIA_TYPE, "Se requiere contenido JSON.", request);
+    }
+
+    private ResponseEntity<ErrorResponseDto> errorHttp(
+            HttpStatus status, String mensaje, HttpServletRequest request) {
+        return ResponseEntity.status(status).body(ErrorResponseDto.builder()
+                .timestamp(LocalDateTime.now()).status(status.value())
+                .error(status.getReasonPhrase()).mensaje(mensaje)
+                .ruta(request.getRequestURI()).build());
+    }
 
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ErrorResponseDto> manejarResourceNotFound(
@@ -97,9 +131,11 @@ public class GlobalExceptionHandler {
                 .timestamp(LocalDateTime.now())
                 .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
                 .error("Error Interno del Servidor")
-                .mensaje(ex.getMessage())
+                .mensaje("No se pudo completar la operación. Consulte el registro del servidor.")
                 .ruta(request.getRequestURI())
                 .build();
+        org.slf4j.LoggerFactory.getLogger(GlobalExceptionHandler.class)
+                .error("Error al procesar {}", request.getRequestURI(), ex);
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }
 }

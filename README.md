@@ -1,131 +1,87 @@
-# EcoCompra Tech – Sistema Web de Compras Tecnológicas Sostenibles
+# EcoCompra Tech — Actividad 02
 
-Proyecto desarrollado con **Java 21** y **Spring Boot 4.1.2** para la evaluación de requerimientos de compras corporativas y proveedores bajo criterios de **reparabilidad, consumo energético y vida útil estimada**, alineado al ODS 9 (Industria, Innovación e Infraestructura).
+Proyecto de Spring Boot, Java 21, JPA/Hibernate y MySQL para registrar productos,
+clientes y ventas, y consultar criterios de reparabilidad, consumo energético y vida útil.
 
----
+Esta rama integra el modelo ER, SQL, evidencias, entidades y repositorios del
+avance previo y del PR de Diana con las capas de servicios, DTO y consultas de
+la Actividad 02. Existe un único paquete de entidades: `com.ecocompra.tech.entity`.
 
-## 📂 Arquitectura y Descripción de Carpetas del Proyecto
+## Alcance de la entrega
 
-El proyecto está diseñado bajo una arquitectura limpia por capas (*Layered Architecture*), asegurando la separación de responsabilidades, alta cohesión y bajo acoplamiento:
+| Punto | Implementación y evidencia |
+| --- | --- |
+| 4 | Modelo ER en `docs/diagramas/modelo-er-ecocompra.drawio.png` |
+| 5 | Esquema `docs/sql/01-esquema.sql`; conexión a `ecocompra_tech` |
+| 6 | Cinco entidades en `src/main/java/com/ecocompra/tech/entity` |
+| 7 | Cinco interfaces `JpaRepository` en `repository` |
+| 8 | CRUD de productos/clientes mediante controladores REST, servicios y DTO |
+| 9 | JPQL con `@Query`, Named Queries en entidades y parámetros `@Param` |
+| 10 | Pruebas de servicios, controladores y solicitudes HTTP; perfiles H2/MySQL |
 
-```text
-ecocompra-tech/
-├── .mvn/                                      # Configuración y binarios del Maven Wrapper
-├── mvnw / mvnw.cmd                            # Scripts ejecutables de Maven Wrapper para Unix y Windows
-├── pom.xml                                    # Gestión de dependencias (Spring Boot 4.1.2, JPA, Validation, MySQL, H2)
-├── README.md                                  # Documentación integral del proyecto y guía de uso
-├── src/
-│   ├── main/
-│   │   ├── java/com/ecocompra/tech/
-│   │   │   ├── EcocompraTechApplication.java  # Clase principal de arranque de Spring Boot
-│   │   │   ├── controller/                    # Capa de presentación REST (Controladores HTTP)
-│   │   │   │   ├── CategoriaController.java   # Endpoints CRUD para Categorías
-│   │   │   │   ├── ClienteController.java     # Endpoints CRUD, JPQL y Named Queries de Clientes
-│   │   │   │   ├── InicioController.java      # Endpoint de verificación de estado (/api/estado)
-│   │   │   │   ├── ProductoController.java    # Endpoints CRUD, JPQL y Named Queries de Productos
-│   │   │   │   └── VentaController.java       # Endpoints para registro y consulta de Ventas
-│   │   │   ├── dto/                           # Data Transfer Objects y objetos de petición/respuesta
-│   │   │   │   ├── CategoriaDto.java          # Criterios de validación para categorías
-│   │   │   │   ├── ClienteDto.java            # Criterios de validación para clientes
-│   │   │   │   ├── DetalleVentaRequestDto.java# Línea de detalle para registro de venta
-│   │   │   │   ├── ErrorResponseDto.java      # Estructura estandarizada de errores HTTP
-│   │   │   │   ├── ProductoDto.java           # DTO con reglas y métricas sostenibles
-│   │   │   │   └── VentaRequestDto.java       # Solicitud de venta con validación de cabecera y detalles
-│   │   │   ├── exception/                     # Gestión centralizada de excepciones
-│   │   │   │   ├── GlobalExceptionHandler.java# @RestControllerAdvice para códigos HTTP 400, 404, 409, 500
-│   │   │   │   ├── IllegalOperationException.java # Excepción por violación de reglas o integridad referencial
-│   │   │   │   └── ResourceNotFoundException.java # Excepción lanzada cuando no existe un recurso por ID
-│   │   │   ├── model/                         # Capa de dominio y persistencia (Entidades JPA)
-│   │   │   │   ├── Categoria.java             # Entidad JPA para la tabla 'categoria'
-│   │   │   │   ├── Cliente.java               # Entidad JPA para 'cliente' con Named Queries
-│   │   │   │   ├── DetalleVenta.java          # Entidad JPA para la relación 'detalle_venta'
-│   │   │   │   ├── Producto.java              # Entidad JPA para 'producto' con Named Queries
-│   │   │   │   └── Venta.java                 # Entidad JPA para 'venta' y cálculo de totales
-│   │   │   ├── repository/                    # Capa de acceso a datos (Spring Data JPA)
-│   │   │   │   ├── CategoriaRepository.java   # Repositorio para operaciones sobre categorías
-│   │   │   │   ├── ClienteRepository.java     # Métodos JPQL y Named Queries para clientes
-│   │   │   │   ├── DetalleVentaRepository.java# Operaciones y conteos de detalles de venta
-│   │   │   │   ├── ProductoRepository.java    # Consultas JPQL y Named Queries parametrizadas seguras
-│   │   │   │   └── VentaRepository.java       # Consultas por cliente y rango de fechas
-│   │   │   └── service/                       # Capa de lógica de negocio y transaccionalidad
-│   │   │       ├── CategoriaService.java      # Contrato de servicios para Categorías
-│   │   │       ├── ClienteService.java        # Contrato de servicios para Clientes
-│   │   │       ├── ProductoService.java       # Contrato de servicios para Productos
-│   │   │       ├── VentaService.java          # Contrato de servicios para Ventas
-│   │   │       └── impl/                      # Implementaciones de las interfaces de servicio
-│   │   │           ├── CategoriaServiceImpl.java # Lógica y validación de borrado de categorías
-│   │   │           ├── ClienteServiceImpl.java   # Lógica CRUD, correos únicos y protección de ventas
-│   │   │           ├── ProductoServiceImpl.java  # Reglas de sostenibilidad y restricción referencial
-│   │   │           └── VentaServiceImpl.java     # Transacciones, validación y descuento de stock
-│   │   └── resources/
-│   │       ├── application.properties         # Configuración activa de conexión a MySQL 8 y Hibernate
-│   │       ├── database/                      # Scripts SQL del sistema
-│   │       │   ├── schema.sql                 # DDL de base de datos 'ecocompra_db', tablas y restricciones
-│   │       │   └── data.sql                   # DML con datos semilla sostenibles de prueba
-│   │       └── static/                        # Archivos estáticos servidos automáticamente
-│   │           └── index.html                 # Página de presentación y monitor de estado del sistema
-│   └── test/
-│       ├── java/com/ecocompra/tech/           # Batería de pruebas automatizadas (JUnit 5)
-│       │   ├── EcocompraTechApplicationTests.java # Prueba de arranque del contexto Spring
-│       │   ├── controller/
-│       │   │   ├── ClienteControllerTest.java # Pruebas de integración HTTP del controlador de clientes
-│       │   │   └── ProductoControllerTest.java# Pruebas de integración HTTP del controlador de productos
-│       │   └── service/
-│       │       ├── ClienteServiceTest.java    # Pruebas CRUD, reglas de negocio y Named Queries de cliente
-│       │       ├── ProductoServiceTest.java   # Pruebas CRUD, métricas de sostenibilidad y JPQL de producto
-│       │       └── VentaIntegrationTest.java  # Pruebas integradas de ventas, stock y relaciones JPA
-│       └── resources/
-│           └── application.properties         # Configuración de base de datos H2 en memoria (modo MySQL)
-```
+La planificación y el informe académico deben conservarse también en la entrega;
+esta tabla identifica las evidencias técnicas presentes en el repositorio.
 
----
+## Organización
 
-## 🗄️ Modelo de Datos y Diccionario de Tablas
+- `controller`: endpoints REST.
+- `dto`: solicitudes y validaciones de entrada.
+- `entity`: Categoria, Producto, Cliente, Venta y DetalleVenta; relaciones JPA y Named Queries.
+- `repository`: acceso a datos y consultas parametrizadas.
+- `service` / `service/impl`: reglas de negocio y transacciones.
+- `exception`: errores HTTP centralizados.
+- `docs/sql`: esquema, migración y datos opcionales de demostración.
+- `src/test`: pruebas y configuración aislada.
 
-El modelo entidad-relación conecta 5 entidades principales para el flujo comercial y la categorización sostenible:
+## Configuración y ejecución en Windows
 
-```text
-[categoria] (1) <--- (N) [producto] (1) <--- (N) [detalle_venta] (N) ---> (1) [venta] (N) ---> (1) [cliente]
-```
+Requisito: Java 21 y MySQL 8.0.16 o superior (restricciones CHECK activas).
+Utilizar el Maven Wrapper incluido; no es necesario instalar Maven por separado.
 
-### Reglas de Integridad Referencial
-1. **Protección `ON DELETE RESTRICT`**: No se permite eliminar categorías con productos asociados, ni clientes con ventas registradas, ni productos que figuren en líneas de detalle de ventas.
-2. **Validación de Sostenibilidad**:
-   - Si se registra `consumo_kwh`, el campo `condiciones_consumo` es obligatorio.
-   - Si se informa `consumo_kwh`, `reparabilidad` o `vida_util_anios`, el campo `fuente_tecnica` es obligatorio y verificable.
-3. **Consistencia Financiera y de Stock**:
-   - `precio` $\ge$ 0, `stock` $\ge$ 0, `cantidad` $>$ 0, `precio_unitario` $\ge$ 0.
-   - El precio unitario se almacena en la línea de detalle al momento de la venta, conservando el valor histórico aun si el precio del producto cambia en el catálogo posteriormente.
+1. **Base nueva:** ejecutar `docs/sql/01-esquema.sql` con un usuario autorizado
+   para crear la base y las tablas.
+2. **Base existente del avance previo:** no recrear tablas. Revisar primero las
+   consultas de duplicados de `docs/sql/02-integracion-actividad02.sql`. Si no
+   devuelven filas, ejecutar sus dos ALTER TABLE una sola vez. Si hay duplicados,
+   resolverlos conservando registros y relaciones antes de aplicar restricciones.
+   No ejecutar esta migración en una base creada con el esquema nuevo: ya incluye
+   los índices únicos. Respaldar la base antes de cualquier migración.
+3. Crear o utilizar un usuario MySQL con SELECT, INSERT, UPDATE y DELETE sobre
+   `ecocompra_tech`. La aplicación no requiere permisos para crear bases o tablas.
+4. En PowerShell, dentro de la carpeta del proyecto:
 
----
+   ```powershell
+   $env:DB_USER="tu_usuario_mysql"
+   $env:DB_PASSWORD="tu_clave_mysql"
+   .\mvnw.cmd spring-boot:run
+   ```
 
-## 🛠️ Configuración de la Base de Datos MySQL
+5. Abrir `http://localhost:8080`, `/api/estado`, `/api/productos` y `/api/clientes`.
+   Sin registros, las consultas de listados devuelven `[]`.
 
-### 1. Ejecución del Script DDL y DML
-Se proveen scripts listos para su ejecución en MySQL Server o MySQL Workbench:
-- **DDL:** `src/main/resources/database/schema.sql`
-- **DML:** `src/main/resources/database/data.sql`
+La URL configurada es `jdbc:mysql://localhost:3306/ecocompra_tech`. Ajustar host
+ o puerto en `application.properties` si el MySQL local utiliza otros valores.
+Las credenciales se leen de variables de entorno, sin valores root predeterminados.
+Hibernate utiliza `ddl-auto=validate`; no crea ni modifica las tablas. Los scripts
+SQL no se ejecutan automáticamente (`spring.sql.init.mode=never`).
 
-Comando por consola:
-```bash
-mysql -u root -p < src/main/resources/database/schema.sql
-mysql -u root -p < src/main/resources/database/data.sql
-```
+`docs/sql/03-datos-demostracion.sql` es opcional y debe ejecutarse solo en una base
+**de pruebas vacía**, después del esquema. Contiene nombres, métricas y referencias
+ficticios; no acredita reparabilidad, certificaciones ni ahorro energético reales.
 
-### 2. Configuración en `application.properties`
-```properties
-spring.datasource.url=jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:ecocompra_db}?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true&createDatabaseIfNotExist=true
-spring.datasource.username=${DB_USERNAME:root}
-spring.datasource.password=${DB_PASSWORD:root}
-spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+## Validaciones y protección de datos
 
-spring.jpa.hibernate.ddl-auto=update
-spring.jpa.show-sql=true
-spring.jpa.properties.hibernate.format_sql=true
-spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
-```
-
----
+- Nombres obligatorios, tamaños máximos y correo con formato válido.
+- Precios y stock no negativos; precisión decimal compatible con las columnas SQL.
+- Consumo acompañado de condiciones de medición; métricas sostenibles acompañadas
+  de fuente técnica. La aplicación exige la referencia, pero no verifica su autenticidad.
+- Correos de clientes y nombres de categorías únicos.
+- Clientes y productos relacionados con ventas no pueden eliminarse; categorías
+  relacionadas con productos tampoco. Las relaciones no propagan borrados históricos.
+- Parámetros enlazados en JPQL/Named Queries; no se forma la consulta concatenando entradas.
+- HTTP 400 para JSON, parámetros o campos inválidos; 404 para recursos inexistentes;
+  409 para conflictos de negocio/integridad; 405/415 para método/contenido no admitidos.
+- No se serializan colecciones inversas ni detalles internos de excepciones inesperadas.
 
 ## 🚀 Catálogo de Endpoints de la API REST
 
@@ -145,21 +101,24 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 | `GET` | `/api/productos/buscar/categoria-stock?idCategoria={id}&stockMin={stock}` | **Named Query:** Filtro por categoría y stock mínimo |
 | `GET` | `/api/productos/buscar/reparabilidad?criterio={txt}` | **Named Query:** Búsqueda por facilidad de reparación |
 
-#### Ejemplo de Petición JSON (`POST /api/productos`):
+#### Ejemplo: registrar un producto de demostración
+
+La categoría debe existir. Las métricas siguientes son ficticias, no evidencia técnica.
+
 ```json
 {
   "idCategoria": 1,
-  "nombre": "Laptop VerdeBook Pro 14",
-  "descripcion": "Chasis de aluminio reciclado y modular para fácil actualización",
-  "precio": 3499.00,
-  "stock": 15,
-  "reparabilidad": "Calificación iFixit 9/10, módulos RAM y SSD intercambiables",
-  "consumoKwh": 0.0450,
-  "condicionesConsumo": "8 horas diarias navegación y ofimática a 50% brillo",
-  "vidaUtilAnios": 6.00,
-  "fuenteTecnica": "https://ecocompra.tech/fichas/verdebook14-spec.pdf"
+  "nombre": "Equipo de demostración",
+  "precio": 1200.00,
+  "stock": 3
 }
 ```
+
+También se acepta `"categoria": {"idCategoria": 1}` por compatibilidad con el
+avance de Diana. Si se envían ambos formatos, los identificadores deben coincidir.
+No enviar `idProducto` ni `idCliente` al crear. PUT reemplaza los campos editables
+completos; si se omite `stock`, se toma cero. Para conservarlo, enviarlo explícitamente.
+
 
 ---
 
@@ -207,30 +166,46 @@ spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.MySQLDialect
 
 ---
 
-## 🧪 Pruebas Automatizadas (Actividad 10)
+## Pruebas y validación
 
-El proyecto cuenta con una batería completa de **31 pruebas automatizadas** que validan el 100% de los requerimientos y garantizan ejecución reproducible en cualquier equipo mediante base de datos en memoria H2 (modo MySQL):
+Suite integrada: **61 pruebas**; combina las pruebas de la Actividad 02 con las del
+avance de Diana y regresiones HTTP. Comprueba CRUD, búsquedas JPQL/Named Queries,
+validaciones, serialización, errores HTTP, precisión decimal, IDs en POST, entradas
+con comillas y protección del historial de ventas. No equivale a cobertura total
+ni a una auditoría completa de seguridad.
 
-```bash
-./mvnw test
+### Pruebas aisladas con H2 (predeterminado)
+
+```powershell
+.\mvnw.cmd clean verify
 ```
 
-### Matriz de Casos de Prueba Verificados
-- **Registro y validaciones:** Creación de productos y clientes válidos; rechazo de datos negativos, campos nulos o reglas sostenibles ausentes.
-- **Búsqueda:** Consultas por clave primaria, casos inexistentes (HTTP 404), consultas JPQL y Named Queries con parámetros seguros enlazados (`:param`).
-- **Actualización:** Modificación de datos y persistencia verificada.
-- **Eliminación y Restricción Referencial (`ON DELETE RESTRICT`):** Eliminación exitosa de registros sin operaciones vs. rechazo controlado (`IllegalOperationException` / HTTP 409) al intentar borrar productos o clientes asociados a ventas.
-- **Ventas y Stock:** Registro transaccional de venta, verificación de claves foráneas, cálculo de total y descuento automático de stock.
+No requieren DB_USER/DB_PASSWORD y no utilizan el MySQL de desarrollo. H2 funciona
+ en memoria en modo MySQL con tablas creadas/eliminadas únicamente durante pruebas.
 
----
+### Pruebas opcionales con MySQL real
 
-## 💻 Compilación y Ejecución de la Aplicación
+Usar una instancia/base de pruebas **aislada y descartable**, con las cinco tablas
+creadas mediante `docs/sql/01-esquema.sql`. No apuntar a datos de desarrollo o
+producción: las pruebas preparan y eliminan registros. El usuario de prueba solo
+necesita permisos DML; Hibernate valida el esquema existente sin modificarlo.
 
-Para iniciar el servidor de desarrollo en el puerto 8080:
-
-```bash
-./mvnw spring-boot:run
+```powershell
+$env:TEST_MYSQL_URL="jdbc:mysql://localhost:3306/ecocompra_tech?sslMode=REQUIRED&serverTimezone=UTC"
+$env:TEST_MYSQL_USER="tu_usuario_de_pruebas"
+$env:TEST_MYSQL_PASSWORD="tu_clave_de_pruebas"
+.\mvnw.cmd "-Dspring.profiles.active=mysql" clean verify
 ```
 
-- **Página de inicio:** [http://localhost:8080/](http://localhost:8080/)
-- **Endpoint de estado:** [http://localhost:8080/api/estado](http://localhost:8080/api/estado)
+`sslMode=REQUIRED` exige TLS. Ajustarlo solo según la configuración de la instancia
+ de pruebas. La configuración de producción no incorpora credenciales de ejemplo.
+
+La suite pasó con **H2 y MySQL Community Server 8.4.11**. También se comprobó con
+MySQL que la migración conserva registros y que los CHECK rechazan consumo sin
+condiciones y métricas sin fuente. Esto no prueba la conexión de cada integrante.
+
+GitHub Actions (`.github/workflows/validacion.yml`) ejecuta H2 y MySQL 8.4 en cada
+PR y en los pushes de las ramas configuradas. Las claves visibles allí pertenecen
+solo a una base efímera de CI, sin acceso a bases externas.
+
+Resultados y alcance: `docs/validacion-actividad02.md`.

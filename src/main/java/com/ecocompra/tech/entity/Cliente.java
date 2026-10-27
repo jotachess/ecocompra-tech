@@ -1,4 +1,4 @@
-package com.ecocompra.tech.model;
+package com.ecocompra.tech.entity;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -68,7 +68,7 @@ public class Cliente implements Serializable {
     private String telefono;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, orphanRemoval = false)
+    @OneToMany(mappedBy = "cliente")
     @Builder.Default
     private List<Venta> ventas = new ArrayList<>();
 }

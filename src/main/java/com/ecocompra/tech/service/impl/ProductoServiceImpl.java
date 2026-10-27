@@ -9,8 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ecocompra.tech.dto.ProductoDto;
 import com.ecocompra.tech.exception.IllegalOperationException;
 import com.ecocompra.tech.exception.ResourceNotFoundException;
-import com.ecocompra.tech.model.Categoria;
-import com.ecocompra.tech.model.Producto;
+import com.ecocompra.tech.entity.Categoria;
+import com.ecocompra.tech.entity.Producto;
 import com.ecocompra.tech.repository.CategoriaRepository;
 import com.ecocompra.tech.repository.DetalleVentaRepository;
 import com.ecocompra.tech.repository.ProductoRepository;
@@ -42,6 +42,9 @@ public class ProductoServiceImpl implements ProductoService {
 
     @Override
     public Producto crear(ProductoDto dto) {
+        if (dto.getIdProducto() != null) {
+            throw new IllegalArgumentException("No se permite enviar un ID al crear un producto");
+        }
         Categoria categoria = categoriaRepository.findById(dto.getIdCategoria())
                 .orElseThrow(() -> new ResourceNotFoundException("Categoría", "id", dto.getIdCategoria()));
 
@@ -53,7 +56,7 @@ public class ProductoServiceImpl implements ProductoService {
                 .descripcion(dto.getDescripcion() != null ? dto.getDescripcion().trim() : null)
                 .precio(dto.getPrecio())
                 .stock(dto.getStock())
-                .reparabilidad(dto.getReparabilidad() != null ? dto.getReparabilidad().trim() : null)
+                .reparabilidad(limpiarOpcional(dto.getReparabilidad()))
                 .consumoKwh(dto.getConsumoKwh())
                 .condicionesConsumo(dto.getCondicionesConsumo() != null ? dto.getCondicionesConsumo().trim() : null)
                 .vidaUtilAnios(dto.getVidaUtilAnios())
@@ -77,7 +80,7 @@ public class ProductoServiceImpl implements ProductoService {
         producto.setDescripcion(dto.getDescripcion() != null ? dto.getDescripcion().trim() : null);
         producto.setPrecio(dto.getPrecio());
         producto.setStock(dto.getStock());
-        producto.setReparabilidad(dto.getReparabilidad() != null ? dto.getReparabilidad().trim() : null);
+        producto.setReparabilidad(limpiarOpcional(dto.getReparabilidad()));
         producto.setConsumoKwh(dto.getConsumoKwh());
         producto.setCondicionesConsumo(dto.getCondicionesConsumo() != null ? dto.getCondicionesConsumo().trim() : null);
         producto.setVidaUtilAnios(dto.getVidaUtilAnios());
@@ -187,5 +190,9 @@ public class ProductoServiceImpl implements ProductoService {
             throw new IllegalOperationException(
                     "Al registrar métricas sostenibles (consumo, reparabilidad o vida útil), es obligatorio indicar una fuente técnica verificable.");
         }
+    }
+
+    private String limpiarOpcional(String valor) {
+        return valor == null || valor.isBlank() ? null : valor.trim();
     }
 }

@@ -20,7 +20,7 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import com.ecocompra.tech.dto.ClienteDto;
 import com.ecocompra.tech.exception.ResourceNotFoundException;
-import com.ecocompra.tech.model.Cliente;
+import com.ecocompra.tech.entity.Cliente;
 
 @SpringBootTest
 @Transactional

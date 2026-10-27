@@ -3,7 +3,7 @@ package com.ecocompra.tech.service;
 import java.util.List;
 
 import com.ecocompra.tech.dto.CategoriaDto;
-import com.ecocompra.tech.model.Categoria;
+import com.ecocompra.tech.entity.Categoria;
 
 public interface CategoriaService {
 

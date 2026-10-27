@@ -19,10 +19,10 @@ import com.ecocompra.tech.dto.DetalleVentaRequestDto;
 import com.ecocompra.tech.dto.ProductoDto;
 import com.ecocompra.tech.dto.VentaRequestDto;
 import com.ecocompra.tech.exception.IllegalOperationException;
-import com.ecocompra.tech.model.Categoria;
-import com.ecocompra.tech.model.Cliente;
-import com.ecocompra.tech.model.Producto;
-import com.ecocompra.tech.model.Venta;
+import com.ecocompra.tech.entity.Categoria;
+import com.ecocompra.tech.entity.Cliente;
+import com.ecocompra.tech.entity.Producto;
+import com.ecocompra.tech.entity.Venta;
 
 @SpringBootTest
 @Transactional

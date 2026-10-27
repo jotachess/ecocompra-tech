@@ -1,4 +1,4 @@
-package com.ecocompra.tech.model;
+package com.ecocompra.tech.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -55,7 +55,7 @@ public class Venta implements Serializable {
     @Builder.Default
     private LocalDateTime fecha = LocalDateTime.now();
 
-    @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "venta", cascade = {CascadeType.PERSIST, CascadeType.MERGE}, orphanRemoval = false, fetch = FetchType.EAGER)
     @Builder.Default
     private List<DetalleVenta> detalles = new ArrayList<>();
 

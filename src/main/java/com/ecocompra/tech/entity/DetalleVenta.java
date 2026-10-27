@@ -1,4 +1,4 @@
-package com.ecocompra.tech.model;
+package com.ecocompra.tech.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

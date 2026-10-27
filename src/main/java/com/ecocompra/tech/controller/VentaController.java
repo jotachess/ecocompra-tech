@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.ecocompra.tech.dto.VentaRequestDto;
-import com.ecocompra.tech.model.Venta;
+import com.ecocompra.tech.entity.Venta;
 import com.ecocompra.tech.service.VentaService;
 
 import jakarta.validation.Valid;
