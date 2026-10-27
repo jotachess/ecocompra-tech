@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoCompra Tech</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f3f6f3;
+      color: #1c3b30;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    main {
+      max-width: 1120px;
+      margin: auto;
+      padding: 40px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-bottom: 26px;
+      border-bottom: 1px solid #d6e1d8;
+    }
+
+    .marca {
+      font-size: 23px;
+      font-weight: 750;
+    }
+
+    .marca span { color: #65815f; }
+
+    .etiqueta {
+      padding: 9px 13px;
+      border-radius: 4px;
+      background: #e1ebdc;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .tema {
+      margin-top: 54px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 18px 0;
+      font-size: clamp(30px, 4.5vw, 48px);
+      line-height: 1.15;
+      letter-spacing: -1.5px;
+    }
+
+    .descripcion {
+      max-width: 800px;
+      color: #68766b;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    .estado {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin: 32px 0;
+      padding: 24px;
+      background: white;
+      border: 1px solid #d9e2d8;
+      border-radius: 9px;
+    }
+
+    .punto {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #909a91;
+      flex-shrink: 0;
+    }
+
+    .estado.correcto .punto { background: #32905c; }
+    .estado.error .punto { background: #b64b4b; }
+
+    .estado strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .estado small { color: #68766b; }
+
+    .estado a {
+      margin-left: auto;
+      color: #395d45;
+      font-size: 13px;
+    }
+
+    .criterios {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    article {
+      padding: 26px;
+      border: 1px solid #d6e0d0;
+      border-radius: 8px;
+      background: #ebf1e7;
+    }
+
+    .numero {
+      color: #71816c;
+      font-size: 11px;
+    }
+
+    h2 {
+      margin: 20px 0 10px;
+      font-size: 19px;
+    }
+
+    article p {
+      margin: 0;
+      color: #68766b;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    footer {
+      margin-top: 38px;
+      color: #748071;
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    @media (max-width: 650px) {
+      main { padding: 24px; }
+      header { flex-wrap: wrap; }
+      .criterios { grid-template-columns: 1fr; }
+      .estado { flex-wrap: wrap; }
+      .estado a { margin-left: 28px; }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <header>
+      <div class="marca">EcoCompra <span>Tech</span></div>
+      <div class="etiqueta">ACTIVIDAD 01 · SEMANA 1</div>
+    </header>
+
+    <p class="tema">
+      TEMA 7 · SOLUCIONES WEB Y APLICACIONES DISTRIBUIDAS
+    </p>
+
+    <h1>Compras tecnológicas con criterios sostenibles</h1>
+
+    <p class="descripcion">
+      Base inicial de un sistema web para evaluar requerimientos de
+      compra y proveedores considerando la reparabilidad, el consumo
+      energético y la vida útil de los equipos.
+    </p>
+
+    <section class="estado" id="estado" aria-label="Estado del servidor">
+      <span class="punto" aria-hidden="true"></span>
+
+      <div role="status">
+        <strong id="mensaje">Comprobando el servidor...</strong>
+        <small>EcoCompra Tech · Puerto 8080 · Sin conexión en esta entrega</small>
+      </div>
+
+      <a href="/api/estado" target="_blank" rel="noopener">
+        Ver estado de la API ↗
+      </a>
+    </section>
+
+    <section class="criterios" aria-label="Criterios de sostenibilidad">
+      <article>
+        <span class="numero">01 / CRITERIO</span>
+        <h2>Reparabilidad</h2>
+        <p>
+          Considerar la facilidad de reparación y la disponibilidad
+          de repuestos.
+        </p>
+      </article>
+
+      <article>
+        <span class="numero">02 / CRITERIO</span>
+        <h2>Consumo energético</h2>
+        <p>
+          Comparar las necesidades de energía de las alternativas
+          tecnológicas.
+        </p>
+      </article>
+
+      <article>
+        <span class="numero">03 / CRITERIO</span>
+        <h2>Vida útil</h2>
+        <p>
+          Evaluar la durabilidad y el período de uso esperado
+          de los equipos.
+        </p>
+      </article>
+    </section>
+
+    <footer>
+      Entrega inicial: configuración y verificación del entorno.
+      La evaluación de compras y proveedores se desarrollará en las
+      siguientes actividades.<br>
+      ODS 9 · Industria, innovación e infraestructura ·
+      Sin conexión a base de datos en esta etapa.
+    </footer>
+  </main>
+
+  <script>
+    async function comprobarEstado() {
+      const panel = document.getElementById("estado");
+      const mensaje = document.getElementById("mensaje");
+
+      try {
+        const respuesta = await fetch("/api/estado");
+
+        if (!respuesta.ok) {
+          throw new Error("Error HTTP");
+        }
+
+        const datos = await respuesta.json();
+
+        if (datos.estado !== "EN EJECUCION") {
+          throw new Error("Estado inesperado");
+        }
+
+        panel.classList.add("correcto");
+        mensaje.textContent = "Spring Boot en ejecución";
+      } catch (error) {
+        panel.classList.add("error");
+        mensaje.textContent = "No se pudo verificar el servidor";
+      }
+    }
+
+    comprobarEstado();
+  </script>
+</body>
+</html>
