@@ -3,6 +3,8 @@ package com.ecocompra.tech.controller;
 
 import com.ecocompra.tech.entity.Producto;
 import com.ecocompra.tech.repository.ProductoRepository;
+import com.ecocompra.tech.repository.CategoriaRepository;
+import com.ecocompra.tech.entity.Categoria;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,15 +18,22 @@ import java.util.List;
 public class ProductoController {
 
     private final ProductoRepository repository;
+    private final CategoriaRepository categorias;
 
-    public ProductoController(ProductoRepository repository) {
+    public ProductoController(ProductoRepository repository, CategoriaRepository categorias) {
         this.repository = repository;
+        this.categorias = categorias;
     }
 
     // CREAR PRODUCTO
     @PostMapping
     public ResponseEntity<Producto> crear(
             @Valid @RequestBody Producto producto) {
+        if (producto.getIdProducto() != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "No se permite enviar un ID al crear un producto");
+        }
+        producto.setCategoria(resolverCategoria(producto.getCategoria()));
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(repository.save(producto));
     }
@@ -54,7 +63,7 @@ public class ProductoController {
 
         actual.setNombre(datos.getNombre());
         actual.setDescripcion(datos.getDescripcion());
-        actual.setCategoria(datos.getCategoria());
+        actual.setCategoria(resolverCategoria(datos.getCategoria()));
         actual.setPrecio(datos.getPrecio());
         actual.setStock(datos.getStock());
         actual.setReparabilidad(datos.getReparabilidad());
@@ -63,7 +72,9 @@ public class ProductoController {
         actual.setVidaUtilAnios(datos.getVidaUtilAnios());
         actual.setFuenteTecnica(datos.getFuenteTecnica());
 
-        return repository.save(actual);
+        Producto guardado = repository.save(actual);
+        // Recargar con la categoría antes de serializar fuera de la transacción.
+        return buscar(guardado.getIdProducto());
     }
 
     // ELIMINAR PRODUCTO
@@ -82,5 +93,15 @@ public class ProductoController {
         }
 
         return ResponseEntity.noContent().build();
+    }
+
+    private Categoria resolverCategoria(Categoria categoria) {
+        if (categoria == null || categoria.getIdCategoria() == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "Se requiere el ID de una categoría existente");
+        }
+        return categorias.findById(categoria.getIdCategoria())
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                        "Categoría no encontrada"));
     }
 }

@@ -28,6 +28,10 @@ public class ClienteController {
     public ResponseEntity<Cliente> crear(
             @Valid @RequestBody Cliente cliente) {
 
+        if (cliente.getIdCliente() != null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "No se permite enviar un ID al crear un cliente");
+        }
         return ResponseEntity.status(HttpStatus.CREATED)
                 .body(repository.save(cliente));
     }
