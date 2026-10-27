@@ -1,0 +1,7 @@
+﻿ :: Spring Boot ::                (v4.1.2)
+2026-10-26T21:54:10.482-05:00  INFO 43232 --- [ecocompra-tech] [           main] c.e.tech.EcocompraTechApplicationTests   : Starting EcocompraTechApplicationTests using Java 21.0.12.1 with PID 43232 (started by chave in C:\Proyectos\ecocompra-tech\ecocompra-tech)
+2026-10-26T21:54:11.929-05:00  INFO 43232 --- [ecocompra-tech] [           main] c.e.tech.EcocompraTechApplicationTests   : Started EcocompraTechApplicationTests in 1.729 seconds (process running for 2.816)
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.969 s -- in com.ecocompra.tech.EcocompraTechApplicationTests
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+[INFO] Total time:  11.930 s
