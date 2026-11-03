@@ -1,0 +1,26 @@
+ACTIVIDAD 03 - SOLICITUDES REALES A LA API
+JWT y claves omitidos; el detalle está en api-resultados.json.
+
+Sin autenticación
+GET /api/productos -> HTTP 401
+{"status": 401, "error": "Unauthorized", "mensaje": "Se requiere un token JWT valido y vigente."}
+
+Ingreso de administrador
+POST /api/auth/login -> HTTP 200
+{"tokenType": "Bearer", "expiresIn": 1800, "username": "admin", "roles": ["ADMIN"]}
+
+Ingreso de vendedor
+POST /api/auth/login -> HTTP 200
+{"tokenType": "Bearer", "expiresIn": 1800, "username": "vendedor", "roles": ["VENDEDOR"]}
+
+Vendedor sin permiso de catálogo
+POST /api/productos -> HTTP 403
+{"status": 403, "error": "Forbidden", "mensaje": "Su rol no tiene permiso para esta operacion."}
+
+Token adulterado
+GET /api/productos -> HTTP 401
+{"status": 401, "error": "Unauthorized", "mensaje": "Token JWT invalido o vencido."}
+
+Vendedor no elimina ventas
+DELETE /api/ventas/2 -> HTTP 403
+{"status": 403, "error": "Forbidden", "mensaje": "Su rol no tiene permiso para esta operacion."}

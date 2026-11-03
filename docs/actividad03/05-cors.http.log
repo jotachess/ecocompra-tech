@@ -1,0 +1,15 @@
+ECOCOMPRA TECH - ACTIVIDAD 03
+Registro de solicitudes HTTP reales. Tokens y claves omitidos.
+
+CORS origen Angular
+OPTIONS /api/clientes -> HTTP 200
+{
+  "Access-Control-Allow-Origin": "http://localhost:4200",
+  "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+  "Access-Control-Allow-Headers": "authorization, content-type"
+}
+""
+
+CORS origen rechazado
+OPTIONS /api/clientes -> HTTP 403
+"Invalid CORS request"

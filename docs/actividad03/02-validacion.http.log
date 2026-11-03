@@ -1,0 +1,31 @@
+ECOCOMPRA TECH - ACTIVIDAD 03
+Registro de solicitudes HTTP reales. Tokens y claves omitidos.
+
+Validación de producto
+POST /api/productos -> HTTP 400
+{
+  "timestamp": "2026-11-03 00:00:32",
+  "status": 400,
+  "error": "Error de Validación de Datos",
+  "mensaje": "Uno o más campos enviados no cumplen las restricciones obligatorias",
+  "ruta": "/api/productos",
+  "validaciones": {
+    "precio": "El precio debe ser mayor o igual a cero",
+    "idCategoria": "El identificador de categoría es obligatorio",
+    "stock": "El stock debe ser mayor o igual a cero",
+    "nombre": "El nombre del producto no puede estar vacío"
+  }
+}
+
+Validación de correo
+POST /api/clientes -> HTTP 400
+{
+  "timestamp": "2026-11-03 00:00:32",
+  "status": 400,
+  "error": "Error de Validación de Datos",
+  "mensaje": "Uno o más campos enviados no cumplen las restricciones obligatorias",
+  "ruta": "/api/clientes",
+  "validaciones": {
+    "correo": "El correo debe tener un formato válido"
+  }
+}

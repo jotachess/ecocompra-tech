@@ -12,6 +12,9 @@ import com.ecocompra.tech.entity.Venta;
 
 @Repository
 public interface VentaRepository extends JpaRepository<Venta, Long> {
+    @org.springframework.data.jpa.repository.Lock(jakarta.persistence.LockModeType.PESSIMISTIC_WRITE)
+    @Query("select v from Venta v where v.idVenta = :id")
+    java.util.Optional<Venta> bloquearPorId(@Param("id") Long id);
 
     List<Venta> findByClienteIdCliente(Long idCliente);
 

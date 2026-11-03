@@ -1,0 +1,47 @@
+ECOCOMPRA TECH - ACTIVIDAD 03
+Registro de solicitudes HTTP reales. Tokens y claves omitidos.
+
+Crear cliente
+POST /api/clientes -> HTTP 201
+{"idCliente": 3, "nombre": "Cliente evidencia CRUD"}
+
+Mostrar cliente
+GET /api/clientes/3 -> HTTP 200
+{"idCliente": 3, "nombre": "Cliente evidencia CRUD"}
+
+Actualizar cliente
+PUT /api/clientes/3 -> HTTP 200
+{"idCliente": 3, "nombre": "Cliente evidencia actualizado"}
+
+Eliminar cliente
+DELETE /api/clientes/3 -> HTTP 204
+
+Crear producto
+POST /api/productos -> HTTP 201
+{"idProducto": 4, "nombre": "Producto evidencia CRUD"}
+
+Mostrar producto
+GET /api/productos/4 -> HTTP 200
+{"idProducto": 4, "nombre": "Producto evidencia CRUD"}
+
+Actualizar producto
+PUT /api/productos/4 -> HTTP 200
+{"idProducto": 4, "nombre": "Producto evidencia actualizado"}
+
+Eliminar producto
+DELETE /api/productos/4 -> HTTP 204
+
+Crear venta como vendedor
+POST /api/ventas -> HTTP 201
+{"idVenta": 2}
+
+Mostrar venta
+GET /api/ventas/2 -> HTTP 200
+{"idVenta": 2}
+
+Actualizar venta
+PUT /api/ventas/2 -> HTTP 200
+{"idVenta": 2}
+
+Eliminar venta
+DELETE /api/ventas/2 -> HTTP 204

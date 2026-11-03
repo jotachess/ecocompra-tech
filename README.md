@@ -1,4 +1,19 @@
-# EcoCompra Tech — Actividad 02
+# EcoCompra Tech — Actividad 03
+
+API con JWT y roles ADMIN/VENDEDOR, más una interfaz Angular con inicio,
+productos, clientes y ventas. Instrucciones actuales, permisos y pruebas:
+**[Guía de la Actividad 03](docs/actividad03.md)**.
+
+Para una demostración aislada sin MySQL, ejecutar `scripts/iniciar-demo.ps1`
+(Java 21) y, en otra terminal, `scripts/iniciar-frontend.ps1` (Node 24 y pnpm 11).
+Los usuarios son `admin` y `vendedor`; las contraseñas aleatorias se generan
+localmente en `.local/demo-config.json`. Este archivo no forma parte de la entrega.
+
+## Antecedentes de la Actividad 02
+
+La documentación siguiente corresponde al avance de persistencia. Desde la
+Actividad 03, los endpoints de negocio requieren un JWT y los permisos descritos
+en la guía actual. Las solicitudes antiguas deben agregar `Authorization: Bearer ...`.
 
 Proyecto de Spring Boot, Java 21, JPA/Hibernate y MySQL para registrar productos,
 clientes y ventas, y consultar criterios de reparabilidad, consumo energético y vida útil.

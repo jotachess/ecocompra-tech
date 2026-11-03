@@ -24,6 +24,16 @@ import jakarta.servlet.http.HttpServletRequest;
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
+    @ExceptionHandler(org.springframework.security.core.AuthenticationException.class)
+    public ResponseEntity<ErrorResponseDto> manejarAutenticacion(Exception ex, HttpServletRequest request) {
+        return errorHttp(HttpStatus.UNAUTHORIZED, "Usuario o contrasena incorrectos.", request);
+    }
+
+    @ExceptionHandler(org.springframework.security.access.AccessDeniedException.class)
+    public ResponseEntity<ErrorResponseDto> manejarAcceso(Exception ex, HttpServletRequest request) {
+        return errorHttp(HttpStatus.FORBIDDEN, "Su rol no tiene permiso para esta operacion.", request);
+    }
+
     @ExceptionHandler({HttpMessageNotReadableException.class,
             MissingServletRequestParameterException.class,
             MethodArgumentTypeMismatchException.class})

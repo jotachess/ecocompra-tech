@@ -1,0 +1,14 @@
+ACTIVIDAD 03 - SOLICITUDES REALES A LA API
+JWT y claves omitidos; el detalle está en api-resultados.json.
+
+Identificador inexistente
+GET /api/clientes/999999 -> HTTP 404
+mensaje: Cliente no encontrado con id: '999999'
+
+Correo duplicado
+POST /api/clientes -> HTTP 409
+mensaje: Ya existe un cliente registrado con el correo: crud.evidencia@example.com
+
+Stock insuficiente
+PUT /api/ventas/2 -> HTTP 409
+mensaje: Stock insuficiente para Producto evidencia actualizado

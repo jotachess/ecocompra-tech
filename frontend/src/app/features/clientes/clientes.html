@@ -1,0 +1,110 @@
+<div class="page-heading">
+  <div>
+    <p class="eyebrow">RELACIONES QUE IMPORTAN</p>
+    <h1>Clientes</h1>
+    <p class="muted">Mantén actualizados los contactos de tus operaciones.</p>
+  </div>
+  <span class="count-tag"
+    >{{ rows().length }} {{ rows().length === 1 ? 'cliente' : 'clientes' }}</span
+  >
+</div>
+@if (error()) {
+  <div class="alert error" role="alert">{{ error() }}</div>
+}
+@if (notice()) {
+  <div class="alert success" role="status">{{ notice() }}</div>
+}
+<div class="resource-grid">
+  <section class="panel">
+    <div class="panel-heading">
+      <h2>Directorio de clientes</h2>
+      <label class="search"
+        ><span>⌕</span
+        ><input
+          aria-label="Buscar cliente"
+          placeholder="Buscar por nombre o correo…"
+          [ngModel]="search()"
+          (ngModelChange)="search.set($event)"
+      /></label>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Contacto</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (c of filtered(); track c.idCliente) {
+            <tr>
+              <td>
+                <strong>{{ c.nombre }}</strong
+                ><small>Cliente #{{ c.idCliente }}</small>
+              </td>
+              <td>
+                {{ c.correo || 'Sin correo' }}<small>{{ c.telefono || 'Sin teléfono' }}</small>
+              </td>
+              <td class="actions">
+                <button type="button" (click)="edit(c)">Editar</button>
+                @if (auth.admin()) {
+                  <button
+                    class="danger-text"
+                    type="button"
+                    (click)="pendingDelete.set(c.idCliente)"
+                  >
+                    Eliminar
+                  </button>
+                  @if (pendingDelete() === c.idCliente) {
+                    <div class="confirm">
+                      ¿Eliminar este cliente?<button type="button" (click)="remove(c.idCliente)">
+                        Confirmar</button
+                      ><button type="button" (click)="pendingDelete.set(null)">Cancelar</button>
+                    </div>
+                  }
+                }
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="3" class="empty">No se encontraron clientes.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="panel form-panel">
+    <p class="eyebrow">DATOS DE CONTACTO</p>
+    <h2>{{ editing() ? 'Editar cliente' : 'Nuevo cliente' }}</h2>
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <label for="cn">Nombre *</label
+      ><input id="cn" formControlName="nombre" maxlength="120" /><label for="ce"
+        >Correo electrónico</label
+      ><input
+        id="ce"
+        type="email"
+        formControlName="correo"
+        maxlength="150"
+        placeholder="nombre@organizacion.com"
+      />
+      @if (form.controls.correo.invalid && form.controls.correo.touched) {
+        <p class="field-error">Ingresa un correo válido.</p>
+      }
+      <label for="ct">Teléfono</label
+      ><input id="ct" type="tel" formControlName="telefono" maxlength="20" />
+      <p class="note">
+        El correo es único cuando se registra. Los clientes vinculados a ventas no pueden
+        eliminarse.
+      </p>
+      <div class="form-actions">
+        <button class="primary" type="submit" [disabled]="form.invalid || busy()">
+          {{ busy() ? 'Guardando…' : 'Guardar cliente' }}</button
+        ><button class="secondary" type="button" (click)="reset()">
+          {{ editing() ? 'Cancelar' : 'Limpiar' }}
+        </button>
+      </div>
+    </form>
+  </section>
+</div>
