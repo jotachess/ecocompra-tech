@@ -1,0 +1,191 @@
+[
+  {
+    "id": "S-anon-productos",
+    "prueba": "Sin token en productos",
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "esperado": 401,
+    "obtenido": 401,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-admin-productos",
+    "prueba": "ADMIN consulta productos",
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "esperado": 200,
+    "obtenido": 200,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-seller-productos",
+    "prueba": "VENDEDOR consulta productos",
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "esperado": 200,
+    "obtenido": 200,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-anon-clientes",
+    "prueba": "Sin token en clientes",
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "esperado": 401,
+    "obtenido": 401,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-admin-clientes",
+    "prueba": "ADMIN consulta clientes",
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "esperado": 200,
+    "obtenido": 200,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-seller-clientes",
+    "prueba": "VENDEDOR consulta clientes",
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "esperado": 200,
+    "obtenido": 200,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-anon-ventas",
+    "prueba": "Sin token en ventas",
+    "metodo": "GET",
+    "ruta": "/api/ventas",
+    "esperado": 401,
+    "obtenido": 401,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-admin-ventas",
+    "prueba": "ADMIN consulta ventas",
+    "metodo": "GET",
+    "ruta": "/api/ventas",
+    "esperado": 200,
+    "obtenido": 200,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-seller-ventas",
+    "prueba": "VENDEDOR consulta ventas",
+    "metodo": "GET",
+    "ruta": "/api/ventas",
+    "esperado": 200,
+    "obtenido": 200,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-anon-usuarios",
+    "prueba": "Sin token en usuarios",
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "esperado": 401,
+    "obtenido": 401,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-admin-usuarios",
+    "prueba": "ADMIN consulta usuarios",
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "esperado": 200,
+    "obtenido": 200,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-seller-usuarios",
+    "prueba": "VENDEDOR consulta usuarios",
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "esperado": 403,
+    "obtenido": 403,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-rol-POST/api/usuarios",
+    "prueba": "Operacion restringida para VENDEDOR",
+    "metodo": "POST",
+    "ruta": "/api/usuarios",
+    "esperado": 403,
+    "obtenido": 403,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-rol-PUT/api/usuarios/1",
+    "prueba": "Operacion restringida para VENDEDOR",
+    "metodo": "PUT",
+    "ruta": "/api/usuarios/1",
+    "esperado": 403,
+    "obtenido": 403,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-rol-DELETE/api/usuarios/1",
+    "prueba": "Operacion restringida para VENDEDOR",
+    "metodo": "DELETE",
+    "ruta": "/api/usuarios/1",
+    "esperado": 403,
+    "obtenido": 403,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-rol-GET/api/usuarios/1",
+    "prueba": "Operacion restringida para VENDEDOR",
+    "metodo": "GET",
+    "ruta": "/api/usuarios/1",
+    "esperado": 403,
+    "obtenido": 403,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-rol-POST/api/productos",
+    "prueba": "Operacion restringida para VENDEDOR",
+    "metodo": "POST",
+    "ruta": "/api/productos",
+    "esperado": 403,
+    "obtenido": 403,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-validacion",
+    "prueba": "Validacion backend aunque se omita Angular",
+    "metodo": "POST",
+    "ruta": "/api/clientes",
+    "esperado": 400,
+    "obtenido": 400,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-inexistente",
+    "prueba": "Recurso inexistente",
+    "metodo": "GET",
+    "ruta": "/api/productos/99999999",
+    "esperado": 404,
+    "obtenido": 404,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-cors-ok",
+    "prueba": "Preflight autorizada",
+    "metodo": "OPTIONS",
+    "ruta": "/api/clientes",
+    "esperado": 200,
+    "obtenido": 200,
+    "resultado": "Correcto"
+  },
+  {
+    "id": "S-cors-no",
+    "prueba": "Origen no autorizado",
+    "metodo": "OPTIONS",
+    "ruta": "/api/clientes",
+    "esperado": 403,
+    "obtenido": 403,
+    "resultado": "Correcto"
+  }
+]

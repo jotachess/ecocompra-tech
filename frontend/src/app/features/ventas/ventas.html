@@ -1,0 +1,152 @@
+<div class="page-heading">
+  <div>
+    <p class="eyebrow">OPERACIONES DEL SISTEMA</p>
+    <h1>Ventas</h1>
+    <p class="muted">Registra las operaciones y consulta sus productos e importes.</p>
+  </div>
+  <span class="count-tag">{{ rows().length }} {{ rows().length === 1 ? 'venta' : 'ventas' }}</span>
+</div>
+@if (error()) {
+  <div class="alert error" role="alert">{{ error() }}</div>
+}
+@if (notice()) {
+  <div class="alert success" role="status">{{ notice() }}</div>
+}
+<div class="resource-grid sales-grid">
+  <section class="panel">
+    <div class="panel-heading">
+      <h2>Ventas registradas</h2>
+      <span class="muted">Importes en PEN</span>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Operación</th>
+            <th>Cliente</th>
+            <th>Total</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (v of rows(); track v.idVenta) {
+            <tr>
+              <td>
+                <strong>#{{ v.idVenta }}</strong
+                ><small>{{ v.fecha }}</small>
+              </td>
+              <td>{{ v.cliente.nombre }}</td>
+              <td class="nowrap">{{ total(v) | currency: 'PEN' : 'S/ ' : '1.2-2' }}</td>
+              <td class="actions">
+                <button type="button" (click)="selected.set(v)">Ver detalle</button>
+                @if (auth.admin()) {
+                  <button type="button" [disabled]="busy()" (click)="edit(v)">Editar</button
+                  ><button class="danger-text" type="button" (click)="pendingDelete.set(v.idVenta)">
+                    Eliminar
+                  </button>
+                  @if (pendingDelete() === v.idVenta) {
+                    <div class="confirm">
+                      Se eliminará la venta y se devolverá el stock.<button
+                        type="button"
+                        (click)="remove(v.idVenta)"
+                      >
+                        Confirmar</button
+                      ><button type="button" (click)="pendingDelete.set(null)">Cancelar</button>
+                    </div>
+                  }
+                }
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="4" class="empty">Aún no se registraron ventas.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+    @if (selected(); as s) {
+      <section class="sale-detail">
+        <div class="panel-heading">
+          <h3>Detalle de la venta #{{ s.idVenta }}</h3>
+          <button class="secondary" type="button" (click)="selected.set(null)">
+            Cerrar detalle
+          </button>
+        </div>
+        @for (d of s.detalles; track d.idDetalle) {
+          <p>
+            {{ d.producto.nombre }}
+            <span
+              >{{ d.cantidad }} × {{ d.precioUnitario | currency: 'PEN' : 'S/ ' : '1.2-2' }}</span
+            >
+          </p>
+        }
+      </section>
+    }
+  </section>
+  <section class="panel form-panel">
+    <p class="eyebrow">REGISTRO DE OPERACIONES</p>
+    <h2>{{ editing() ? 'Editar venta' : 'Nueva venta' }}</h2>
+    <form [formGroup]="form" (ngSubmit)="save()">
+      <label for="vc">Cliente *</label
+      ><select id="vc" formControlName="idCliente">
+        <option [ngValue]="null">Selecciona un cliente</option>
+        @for (c of clients(); track c.idCliente) {
+          <option [ngValue]="c.idCliente">{{ c.nombre }}</option>
+        }
+      </select>
+<app-field-error [control]="form.controls.idCliente" label="El cliente" />
+      <div formArrayName="detalles">
+        @for (line of details.controls; track line; let i = $index) {
+          <div class="sale-line" [formGroupName]="i">
+            <label [for]="'vp' + i">Producto {{ i + 1 }} *</label
+            ><select
+              [id]="'vp' + i"
+              formControlName="idProducto"
+              (change)="line.controls.precioUnitario.setValue(null)"
+            >
+              <option [ngValue]="null">Selecciona un producto</option>
+              @for (p of products(); track p.idProducto) {
+                <option [ngValue]="p.idProducto">{{ p.nombre }} · {{ p.stock }} disponibles</option>
+              }
+            </select>
+<app-field-error [control]="line.controls.idProducto" label="El producto" />
+            <div class="quantity-row">
+              <div>
+                <label [for]="'vq' + i">Cantidad *</label
+                ><input [id]="'vq' + i" type="number" min="1" step="1" formControlName="cantidad" />
+<app-field-error [control]="line.controls.cantidad" label="La cantidad" />
+              </div>
+              <button
+                class="danger-text"
+                type="button"
+                [disabled]="details.length === 1"
+                (click)="details.removeAt(i)"
+              >
+                Quitar
+              </button>
+            </div>
+          </div>
+        }
+      </div>
+      <button class="secondary" type="button" (click)="details.push(line())">
+        + Agregar producto
+      </button>
+      <div class="total-line">
+        <span>Total estimado</span
+        ><strong>{{ estimated() | currency: 'PEN' : 'S/ ' : '1.2-2' }}</strong>
+      </div>
+      <p class="note">
+        El servidor confirma el precio y la disponibilidad. Si no hay stock suficiente, la operación
+        se rechaza completa.
+      </p>
+      <div class="form-actions">
+        <button class="primary" type="submit" [disabled]="form.invalid || busy()">
+          {{ busy() ? 'Guardando…' : 'Guardar venta' }}</button
+        ><button class="secondary" type="button" (click)="reset()">
+          {{ editing() ? 'Cancelar' : 'Limpiar' }}
+        </button>
+      </div>
+    </form>
+  </section>
+</div>

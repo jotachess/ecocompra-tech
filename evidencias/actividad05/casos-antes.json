@@ -1,0 +1,282 @@
+[
+  {
+    "id": "F01",
+    "prueba": "Ruta protegida sin sesión",
+    "esperado": "Redirección a login",
+    "obtenido": "/login",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F02",
+    "prueba": "Login incorrecto",
+    "esperado": "401 y mensaje visible",
+    "obtenido": "HTTP 401",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F03",
+    "prueba": "Ingreso ADMIN",
+    "esperado": "Inicio y enlace Usuarios",
+    "obtenido": "Inicio y Usuarios visible",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F04",
+    "prueba": "Nombre solo espacios",
+    "esperado": "Guardar deshabilitado y aviso",
+    "obtenido": "Formulario bloqueado",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F05",
+    "prueba": "Correo inválido",
+    "esperado": "Guardar deshabilitado",
+    "obtenido": "Formulario bloqueado",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F06",
+    "prueba": "Crear cliente desde Angular",
+    "esperado": "HTTP 201",
+    "obtenido": "HTTP 201",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F07",
+    "prueba": "Correo duplicado controlado",
+    "esperado": "HTTP 409",
+    "obtenido": "HTTP 409",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F08",
+    "prueba": "Error no conserva éxito ni duplica filas",
+    "esperado": "Sin aviso de éxito y un solo cliente",
+    "obtenido": "Clientes coincidentes 1",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F09",
+    "prueba": "Editar cliente",
+    "esperado": "HTTP 200",
+    "obtenido": "HTTP 200",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F10",
+    "prueba": "Precio negativo",
+    "esperado": "Guardar deshabilitado y aviso",
+    "obtenido": "Formulario bloqueado",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F11",
+    "prueba": "Stock fraccionario",
+    "esperado": "Guardar deshabilitado",
+    "obtenido": "Formulario bloqueado",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F12",
+    "prueba": "Sostenibilidad sin fuente",
+    "esperado": "Rechazo hasta incluir una fuente",
+    "obtenido": "Formulario bloqueado",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F13",
+    "prueba": "Crear producto",
+    "esperado": "HTTP 201",
+    "obtenido": "HTTP 201",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F14",
+    "prueba": "Editar precio del producto",
+    "esperado": "HTTP 200",
+    "obtenido": "HTTP 200",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F15",
+    "prueba": "Cantidad cero",
+    "esperado": "Guardar deshabilitado",
+    "obtenido": "Formulario bloqueado",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F16",
+    "prueba": "Venta con stock insuficiente",
+    "esperado": "HTTP 409",
+    "obtenido": "HTTP 409",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F17",
+    "prueba": "Venta rechazada no altera base",
+    "esperado": "Stock 10 y ventas sin cambios",
+    "obtenido": "Stock y número de ventas conservados",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F18",
+    "prueba": "Registrar venta válida",
+    "esperado": "HTTP 201",
+    "obtenido": "HTTP 201",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F19",
+    "prueba": "Editar venta y recalcular stock",
+    "esperado": "HTTP 200",
+    "obtenido": "HTTP 200",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F20",
+    "prueba": "Valores de venta actualizada",
+    "esperado": "Una unidad a 155 y stock 9",
+    "obtenido": "Cantidad 1",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F21",
+    "prueba": "Eliminar cliente usado en venta",
+    "esperado": "HTTP 409",
+    "obtenido": "HTTP 409",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F22",
+    "prueba": "Eliminar producto usado en venta",
+    "esperado": "HTTP 409",
+    "obtenido": "HTTP 409",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F23",
+    "prueba": "Usuario y clave inválidos",
+    "esperado": "Guardar deshabilitado y mensajes",
+    "obtenido": "Formulario bloqueado",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F24",
+    "prueba": "Crear usuario VENDEDOR",
+    "esperado": "HTTP 201",
+    "obtenido": "HTTP 201",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F25",
+    "prueba": "Respuesta de usuario sin secretos",
+    "esperado": "No exponer clave ni hash",
+    "obtenido": "Solo datos de cuenta",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F26",
+    "prueba": "Usuario duplicado",
+    "esperado": "HTTP 409",
+    "obtenido": "HTTP 409",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F27",
+    "prueba": "Cambiar rol de usuario",
+    "esperado": "HTTP 200",
+    "obtenido": "HTTP 200",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F28",
+    "prueba": "JWT anterior invalidado por cambio de rol",
+    "esperado": "401 con JWT previo",
+    "obtenido": "HTTP 401",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F29",
+    "prueba": "Nuevo login aplica el rol actualizado",
+    "esperado": "200 al listar usuarios",
+    "obtenido": "HTTP 200",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F30",
+    "prueba": "Restaurar rol VENDEDOR",
+    "esperado": "HTTP 200",
+    "obtenido": "HTTP 200",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F31",
+    "prueba": "Desactivar usuario",
+    "esperado": "HTTP 200",
+    "obtenido": "HTTP 200",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F32",
+    "prueba": "Cuenta inactiva no puede ingresar",
+    "esperado": "401 en login y token anterior",
+    "obtenido": "Login HTTP 401",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F33",
+    "prueba": "Reactivar cuenta",
+    "esperado": "HTTP 200",
+    "obtenido": "HTTP 200",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F34",
+    "prueba": "Reactivar no revive el JWT anterior",
+    "esperado": "401 con token previo",
+    "obtenido": "HTTP 401",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F35",
+    "prueba": "Impedir autodesactivación del administrador",
+    "esperado": "HTTP 409",
+    "obtenido": "HTTP 409",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F36",
+    "prueba": "Vendedor no ve Usuarios",
+    "esperado": "Sin enlace administrativo",
+    "obtenido": "Usuarios oculto",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F37",
+    "prueba": "Guard de Usuarios rechaza vendedor",
+    "esperado": "Redirección a Inicio",
+    "obtenido": "/inicio",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F38",
+    "prueba": "Desconexión simulada controlada",
+    "esperado": "Mensaje de conexión sin caída de la pantalla",
+    "obtenido": "Mensaje visible",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "F39",
+    "prueba": "Recuperación de conexión",
+    "esperado": "Listado vuelve a mostrar cliente",
+    "obtenido": "Cliente visible",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "JS-antes",
+    "prueba": "Sin errores JavaScript en el recorrido antes",
+    "esperado": "Cero excepciones de página",
+    "obtenido": "0 errores",
+    "resultado": "Correcto"
+  }
+]

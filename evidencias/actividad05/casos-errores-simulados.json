@@ -1,0 +1,26 @@
+[
+  {
+    "id": "E01",
+    "prueba": "Validaciones vacias usan mensaje del backend",
+    "tipo": "Simulacion de respuesta HTTP en el navegador",
+    "esperado": "Conflicto simulado de prueba. Intenta nuevamente.",
+    "obtenido": "Conflicto simulado de prueba. Intenta nuevamente.",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "E02",
+    "prueba": "Error 503 sin mensaje usa texto de respaldo",
+    "tipo": "Simulacion de respuesta HTTP en el navegador",
+    "esperado": "El servidor no pudo completar la operación. Intenta nuevamente.",
+    "obtenido": "El servidor no pudo completar la operación. Intenta nuevamente.",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "E03",
+    "prueba": "Recuperar servicio despues de retirar la simulacion",
+    "tipo": "Peticion real",
+    "esperado": "Listado sin alerta",
+    "obtenido": "Listado sin alerta",
+    "resultado": "Correcto"
+  }
+]

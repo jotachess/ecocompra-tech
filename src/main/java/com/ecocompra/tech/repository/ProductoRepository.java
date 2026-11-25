@@ -13,6 +13,9 @@ import com.ecocompra.tech.entity.Producto;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<Producto, Long> {
+    @org.springframework.data.jpa.repository.Lock(jakarta.persistence.LockModeType.PESSIMISTIC_WRITE)
+    @Query("select p from Producto p where p.idProducto = :id")
+    java.util.Optional<Producto> bloquearPorId(@Param("id") Long id);
     @Override
     @EntityGraph(attributePaths = "categoria")
     List<Producto> findAll();

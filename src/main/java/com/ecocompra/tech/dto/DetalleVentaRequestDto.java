@@ -18,6 +18,7 @@ import lombok.NoArgsConstructor;
 public class DetalleVentaRequestDto {
 
     @NotNull(message = "El identificador de producto es obligatorio")
+    @jakarta.validation.constraints.Positive
     private Long idProducto;
 
     @NotNull(message = "La cantidad es obligatoria")

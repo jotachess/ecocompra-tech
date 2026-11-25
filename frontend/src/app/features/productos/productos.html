@@ -1,0 +1,167 @@
+<div class="page-heading">
+  <div>
+    <p class="eyebrow">CATÁLOGO TECNOLÓGICO</p>
+    <h1>Productos</h1>
+    <p class="muted">Organiza el catálogo y documenta la información de cada equipo.</p>
+  </div>
+  <span class="count-tag"
+    >{{ rows().length }} {{ rows().length === 1 ? 'producto' : 'productos' }}</span
+  >
+</div>
+@if (error()) {
+  <div class="alert error" role="alert">{{ error() }}</div>
+}
+@if (notice()) {
+  <div class="alert success" role="status">{{ notice() }}</div>
+}
+<div class="resource-grid" [class.readonly]="!auth.admin()">
+  <section class="panel">
+    <div class="panel-heading">
+      <h2>Tu catálogo</h2>
+      <label class="search"
+        ><span>⌕</span
+        ><input
+          aria-label="Buscar producto"
+          placeholder="Buscar producto…"
+          [ngModel]="search()"
+          (ngModelChange)="search.set($event)"
+      /></label>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Información técnica</th>
+            @if (auth.admin()) {
+              <th>Acciones</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (p of filtered(); track p.idProducto) {
+            <tr>
+              <td>
+                <strong>{{ p.nombre }}</strong
+                ><small>{{ p.categoria.nombre }}</small>
+              </td>
+              <td class="nowrap">{{ p.precio | currency: 'PEN' : 'S/ ' : '1.2-2' }}</td>
+              <td>
+                <span class="badge" [ngClass]="{ low: p.stock < 3 }">{{ p.stock }} unid.</span>
+              </td>
+              <td>
+                <span class="badge" [ngClass]="{ documented: !!p.fuenteTecnica }">{{
+                  p.fuenteTecnica ? 'Con fuente' : 'Por documentar'
+                }}</span>
+              </td>
+              @if (auth.admin()) {
+                <td class="actions">
+                  <button type="button" [disabled]="busy()" (click)="edit(p)" [attr.aria-label]="'Editar ' + p.nombre">
+                    Editar</button
+                  ><button
+                    class="danger-text"
+                    type="button"
+                    (click)="pendingDelete.set(p.idProducto)"
+                    [attr.aria-label]="'Eliminar ' + p.nombre"
+                  >
+                    Eliminar
+                  </button>
+                  @if (pendingDelete() === p.idProducto) {
+                    <div class="confirm">
+                      ¿Eliminar este producto?<button type="button" (click)="remove(p.idProducto)">
+                        Confirmar</button
+                      ><button type="button" (click)="pendingDelete.set(null)">Cancelar</button>
+                    </div>
+                  }
+                </td>
+              }
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="5" class="empty">No hay productos que coincidan con la búsqueda.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  </section>
+  @if (auth.admin()) {
+    <section class="panel form-panel">
+      <p class="eyebrow">MANTENIMIENTO DEL CATÁLOGO</p>
+      <h2>{{ editing() ? 'Editar producto' : 'Nuevo producto' }}</h2>
+      <form [formGroup]="form" (ngSubmit)="save()">
+        <label for="pn">Nombre *</label
+        ><input id="pn" formControlName="nombre" maxlength="120" />
+<app-field-error [control]="form.controls.nombre" label="El nombre" /><label for="pc"
+          >Categoría *</label
+        ><select id="pc" formControlName="idCategoria">
+          <option [ngValue]="null">Selecciona una categoría</option>
+          @for (c of categories(); track c.idCategoria) {
+            <option [ngValue]="c.idCategoria">{{ c.nombre }}</option>
+          }
+        </select>
+<app-field-error [control]="form.controls.idCategoria" label="La categoría" />
+        <div class="field-grid">
+          <div>
+            <label for="pp">Precio en soles *</label
+            ><input id="pp" type="number" min="0" step="0.01" formControlName="precio" />
+<app-field-error [control]="form.controls.precio" label="El precio" />
+          </div>
+          <div>
+            <label for="ps">Stock *</label
+            ><input id="ps" type="number" min="0" step="1" formControlName="stock" />
+<app-field-error [control]="form.controls.stock" label="El stock" />
+          </div>
+        </div>
+        <label for="pd">Descripción</label
+        ><textarea id="pd" formControlName="descripcion" rows="2" maxlength="500"></textarea>
+        <details>
+          <summary>Datos de sostenibilidad <span>Opcional</span></summary>
+          <label for="pr">Reparabilidad</label
+          ><textarea id="pr" formControlName="reparabilidad" rows="2" maxlength="500"></textarea>
+          <div class="field-grid">
+            <div>
+              <label for="pe">Consumo en kWh</label
+              ><input id="pe" type="number" min="0" step="0.0001" formControlName="consumoKwh" />
+<app-field-error [control]="form.controls.consumoKwh" label="El consumo" />
+            </div>
+            <div>
+              <label for="pv">Vida útil en años</label
+              ><input
+                id="pv"
+                type="number"
+                min="0.01"
+                step="0.01"
+                formControlName="vidaUtilAnios"
+              />
+<app-field-error [control]="form.controls.vidaUtilAnios" label="La vida útil" />
+            </div>
+          </div>
+          <label for="pm">Condiciones de medición</label
+          ><input id="pm" formControlName="condicionesConsumo" maxlength="500" /><label for="pf"
+            >Fuente técnica</label
+          ><textarea id="pf" formControlName="fuenteTecnica" rows="2" maxlength="1000"></textarea>
+          <p class="note">
+            Si registras un criterio sostenible, incluye la fuente. El consumo también necesita su
+            período y condiciones.
+          </p>
+        </details>
+        @if (form.errors?.['sostenibilidad']; as message) {
+          <p class="field-error" role="alert">{{ message }}</p>
+        }
+        @if (form.invalid && form.touched) {
+          <p class="field-error">Revisa los campos obligatorios, el precio y el stock.</p>
+        }
+        <div class="form-actions">
+          <button class="primary" type="submit" [disabled]="form.invalid || busy()">
+            {{ busy() ? 'Guardando…' : 'Guardar producto' }}</button
+          ><button class="secondary" type="button" (click)="reset()">
+            {{ editing() ? 'Cancelar' : 'Limpiar' }}
+          </button>
+        </div>
+      </form>
+    </section>
+  }
+</div>

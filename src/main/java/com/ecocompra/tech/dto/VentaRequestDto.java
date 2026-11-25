@@ -17,9 +17,10 @@ import lombok.NoArgsConstructor;
 public class VentaRequestDto {
 
     @NotNull(message = "El identificador de cliente es obligatorio")
+    @jakarta.validation.constraints.Positive
     private Long idCliente;
 
     @NotEmpty(message = "Una venta confirmada debe contener al menos un detalle de producto")
     @Valid
-    private List<DetalleVentaRequestDto> detalles;
+    private List<@NotNull DetalleVentaRequestDto> detalles;
 }

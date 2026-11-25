@@ -14,6 +14,10 @@ public interface VentaService {
 
     Venta registrarVenta(VentaRequestDto request);
 
+    Venta actualizar(Long id, VentaRequestDto request);
+
+    void eliminar(Long id);
+
     List<Venta> listarPorCliente(Long idCliente);
 
     List<Venta> buscarPorRangoFechas(LocalDateTime desde, LocalDateTime hasta);

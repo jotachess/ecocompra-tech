@@ -1,0 +1,8200 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24623 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] --------------------< com.ecocompra:ecocompra-tech >--------------------
+[INFO] Building  0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ ecocompra-tech ---
+[INFO] Copying 3 resources from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.15.0:compile (default-compile) @ ecocompra-tech ---
+[INFO] Loaded 64 auto-discovered prefixes for remote repository apache.snapshots (prefixes-apache.snapshots.txt)
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ ecocompra-tech ---
+[INFO] Copying 2 resources from src\test\resources to target\test-classes
+[INFO] 
+[INFO] --- compiler:3.15.0:testCompile (default-testCompile) @ ecocompra-tech ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- surefire:3.5.6:test (default-test) @ ecocompra-tech ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.ecocompra.tech.controller.ClienteControllerTest
+18:46:13.900 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ecocompra.tech.controller.ClienteControllerTest]: ClienteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:46:14.033 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.controller.ClienteControllerTest
+18:46:14.121 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.ecocompra.tech.controller.ClienteControllerTest]: ClienteControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+18:46:14.123 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.controller.ClienteControllerTest
+18:46:14.205 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-24T18:46:14.478-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] c.e.t.controller.ClienteControllerTest   : Starting ClienteControllerTest using Java 21.0.12.1 with PID 31336 (started by RogerAAG in C:\Users\RogerAAG\Desktop\EcoCompra Tech\actividad05\ecocompra-tech)
+2026-11-24T18:46:14.480-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] c.e.t.controller.ClienteControllerTest   : No active profile set, falling back to 1 default profile: "default"
+2026-11-24T18:46:15.261-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-24T18:46:15.336-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 6 JPA repository interfaces.
+2026-11-24T18:46:16.123-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-24T18:46:16.242-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.4.13.Final
+2026-11-24T18:46:17.038-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-24T18:46:17.073-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-11-24T18:46:17.261-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:ecocompra_test user=SA
+2026-11-24T18:46:17.263-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-11-24T18:46:17.326-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ecocompra_test]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: ecocompra_test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-24T18:46:18.554-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists categoria cascade 
+Hibernate: 
+    drop table if exists cliente cascade 
+Hibernate: 
+    drop table if exists detalle_venta cascade 
+Hibernate: 
+    drop table if exists producto cascade 
+Hibernate: 
+    drop table if exists usuario cascade 
+Hibernate: 
+    drop table if exists venta cascade 
+Hibernate: 
+    create table categoria (
+        id_categoria bigint generated by default as identity,
+        nombre varchar(120) not null unique,
+        descripcion varchar(500),
+        primary key (id_categoria)
+    )
+Hibernate: 
+    create table cliente (
+        id_cliente bigint generated by default as identity,
+        telefono varchar(20),
+        nombre varchar(120) not null,
+        correo varchar(150) unique,
+        primary key (id_cliente)
+    )
+Hibernate: 
+    create table detalle_venta (
+        cantidad integer not null check ((cantidad>=1)),
+        precio_unitario numeric(10,2) not null,
+        id_detalle bigint generated by default as identity,
+        id_producto bigint not null,
+        id_venta bigint not null,
+        primary key (id_detalle)
+    )
+Hibernate: 
+    create table producto (
+        consumo_kwh numeric(12,4),
+        precio numeric(10,2) not null,
+        stock integer not null check ((stock>=0)),
+        vida_util_anios numeric(5,2),
+        id_categoria bigint not null,
+        id_producto bigint generated by default as identity,
+        nombre varchar(120) not null,
+        condiciones_consumo varchar(500),
+        descripcion varchar(500),
+        reparabilidad varchar(500),
+        fuente_tecnica varchar(1000),
+        primary key (id_producto)
+    )
+Hibernate: 
+    create table usuario (
+        activo boolean not null,
+        id bigint generated by default as identity,
+        token_version bigint not null,
+        rol varchar(20) not null check ((rol in ('ADMIN','VENDEDOR'))),
+        username varchar(80) not null unique,
+        password_hash varchar(100) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table venta (
+        fecha timestamp(6) not null,
+        id_cliente bigint not null,
+        id_venta bigint generated by default as identity,
+        primary key (id_venta)
+    )
+Hibernate: 
+    alter table if exists detalle_venta 
+       add constraint FKsntaik0t9jxcky777753wytsx 
+       foreign key (id_producto) 
+       references producto
+Hibernate: 
+    alter table if exists detalle_venta 
+       add constraint FKoknpg31rxsqnjxrsu7iy47p1o 
+       foreign key (id_venta) 
+       references venta
+Hibernate: 
+    alter table if exists producto 
+       add constraint FK9nyueixdsgbycfhf7allg8su 
+       foreign key (id_categoria) 
+       references categoria
+Hibernate: 
+    alter table if exists venta 
+       add constraint FKsor2qmi3thao7a8or49vlohp9 
+       foreign key (id_cliente) 
+       references cliente
+2026-11-24T18:46:19.032-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-24T18:46:19.148-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-24T18:46:20.300-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-11-24T18:46:20.604-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-11-24T18:46:21.102-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] c.e.t.controller.ClienteControllerTest   : Started ClienteControllerTest in 6.908 seconds (process running for 8.478)
+Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+WARNING: A Java agent has been loaded dynamically (C:\Users\RogerAAG\.m2\repository\net\bytebuddy\byte-buddy-agent\1.18.15\byte-buddy-agent-1.18.15.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.telefono=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        lower(c1_0.correo)=lower(?)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        lower(c1_0.nombre) like lower(('%'||?||'%')) escape '' 
+    order by
+        c1_0.nombre
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        count(v1_0.id_venta) 
+    from
+        venta v1_0 
+    where
+        v1_0.id_cliente=?
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.211 s -- in com.ecocompra.tech.controller.ClienteControllerTest
+[INFO] Running com.ecocompra.tech.controller.ProductoControllerTest
+2026-11-24T18:46:21.851-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.controller.ProductoControllerTest]: ProductoControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:21.853-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.controller.ProductoControllerTest
+2026-11-24T18:46:21.855-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.controller.ProductoControllerTest]: ProductoControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:21.857-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.controller.ProductoControllerTest
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        lower(p1_0.nombre) like lower(('%'||?||'%')) escape '' 
+    order by
+        p1_0.nombre
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.precio between ? and ? 
+    order by
+        p1_0.precio
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_categoria=? 
+        and p1_0.stock>=? 
+    order by
+        p1_0.nombre
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        count(dv1_0.id_detalle) 
+    from
+        detalle_venta dv1_0 
+    where
+        dv1_0.id_producto=?
+[INFO] Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.173 s -- in com.ecocompra.tech.controller.ProductoControllerTest
+[INFO] Running com.ecocompra.tech.EcocompraTechApplicationTests
+2026-11-24T18:46:22.026-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.EcocompraTechApplicationTests]: EcocompraTechApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:22.037-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.EcocompraTechApplicationTests
+2026-11-24T18:46:22.039-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.EcocompraTechApplicationTests]: EcocompraTechApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:22.039-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.EcocompraTechApplicationTests
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s -- in com.ecocompra.tech.EcocompraTechApplicationTests
+[INFO] Running com.ecocompra.tech.PersistenciaApiIntegrationTest
+2026-11-24T18:46:22.053-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.PersistenciaApiIntegrationTest]: PersistenciaApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:22.063-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.PersistenciaApiIntegrationTest
+2026-11-24T18:46:22.065-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.PersistenciaApiIntegrationTest]: PersistenciaApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:22.068-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.PersistenciaApiIntegrationTest
+2026-11-24T18:46:22.076-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.b.d.r.RestartApplicationListener     : Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.1.2)
+
+2026-11-24T18:46:22.102-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] c.e.tech.PersistenciaApiIntegrationTest  : Starting PersistenciaApiIntegrationTest using Java 21.0.12.1 with PID 31336 (started by RogerAAG in C:\Users\RogerAAG\Desktop\EcoCompra Tech\actividad05\ecocompra-tech)
+2026-11-24T18:46:22.102-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] c.e.tech.PersistenciaApiIntegrationTest  : No active profile set, falling back to 1 default profile: "default"
+2026-11-24T18:46:22.298-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-24T18:46:22.324-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 6 JPA repository interfaces.
+2026-11-24T18:46:22.427-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-24T18:46:22.459-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-24T18:46:22.461-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2026-11-24T18:46:22.463-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection conn10: url=jdbc:h2:mem:ecocompra_test user=SA
+2026-11-24T18:46:22.463-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2026-11-24T18:46:22.463-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:ecocompra_test]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: ecocompra_test/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-24T18:46:22.594-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+Hibernate: 
+    drop table if exists categoria cascade 
+Hibernate: 
+    drop table if exists cliente cascade 
+Hibernate: 
+    drop table if exists detalle_venta cascade 
+Hibernate: 
+    drop table if exists producto cascade 
+Hibernate: 
+    drop table if exists usuario cascade 
+Hibernate: 
+    drop table if exists venta cascade 
+Hibernate: 
+    create table categoria (
+        id_categoria bigint generated by default as identity,
+        nombre varchar(120) not null unique,
+        descripcion varchar(500),
+        primary key (id_categoria)
+    )
+Hibernate: 
+    create table cliente (
+        id_cliente bigint generated by default as identity,
+        telefono varchar(20),
+        nombre varchar(120) not null,
+        correo varchar(150) unique,
+        primary key (id_cliente)
+    )
+Hibernate: 
+    create table detalle_venta (
+        cantidad integer not null check ((cantidad>=1)),
+        precio_unitario numeric(10,2) not null,
+        id_detalle bigint generated by default as identity,
+        id_producto bigint not null,
+        id_venta bigint not null,
+        primary key (id_detalle)
+    )
+Hibernate: 
+    create table producto (
+        consumo_kwh numeric(12,4),
+        precio numeric(10,2) not null,
+        stock integer not null check ((stock>=0)),
+        vida_util_anios numeric(5,2),
+        id_categoria bigint not null,
+        id_producto bigint generated by default as identity,
+        nombre varchar(120) not null,
+        condiciones_consumo varchar(500),
+        descripcion varchar(500),
+        reparabilidad varchar(500),
+        fuente_tecnica varchar(1000),
+        primary key (id_producto)
+    )
+Hibernate: 
+    create table usuario (
+        activo boolean not null,
+        id bigint generated by default as identity,
+        token_version bigint not null,
+        rol varchar(20) not null check ((rol in ('ADMIN','VENDEDOR'))),
+        username varchar(80) not null unique,
+        password_hash varchar(100) not null,
+        primary key (id)
+    )
+Hibernate: 
+    create table venta (
+        fecha timestamp(6) not null,
+        id_cliente bigint not null,
+        id_venta bigint generated by default as identity,
+        primary key (id_venta)
+    )
+Hibernate: 
+    alter table if exists detalle_venta 
+       add constraint FKsntaik0t9jxcky777753wytsx 
+       foreign key (id_producto) 
+       references producto
+Hibernate: 
+    alter table if exists detalle_venta 
+       add constraint FKoknpg31rxsqnjxrsu7iy47p1o 
+       foreign key (id_venta) 
+       references venta
+Hibernate: 
+    alter table if exists producto 
+       add constraint FK9nyueixdsgbycfhf7allg8su 
+       foreign key (id_categoria) 
+       references categoria
+Hibernate: 
+    alter table if exists venta 
+       add constraint FKsor2qmi3thao7a8or49vlohp9 
+       foreign key (id_cliente) 
+       references cliente
+2026-11-24T18:46:22.616-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-24T18:46:22.841-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name userDetailsService
+2026-11-24T18:46:22.883-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.b.w.a.WelcomePageHandlerMapping      : Adding welcome page: class path resource [static/index.html]
+2026-11-24T18:46:22.980-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2026-11-24T18:46:22.980-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2026-11-24T18:46:22.983-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 3 ms
+2026-11-24T18:46:23.018-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] c.e.tech.PersistenciaApiIntegrationTest  : Started PersistenciaApiIntegrationTest in 0.942 seconds (process running for 10.394)
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        count(dv1_0.id_detalle) 
+    from
+        detalle_venta dv1_0 
+    where
+        dv1_0.id_producto=?
+Hibernate: 
+    delete 
+    from
+        producto 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    delete 
+    from
+        producto 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    update
+        cliente 
+    set
+        correo=?,
+        nombre=?,
+        telefono=? 
+    where
+        id_cliente=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        count(v1_0.id_venta) 
+    from
+        venta v1_0 
+    where
+        v1_0.id_cliente=?
+Hibernate: 
+    delete 
+    from
+        cliente 
+    where
+        id_cliente=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        venta
+        (id_cliente, fecha, id_venta) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        detalle_venta
+        (cantidad, precio_unitario, id_producto, id_venta, id_detalle) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        count(v1_0.id_venta) 
+    from
+        venta v1_0 
+    where
+        v1_0.id_cliente=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        count(dv1_0.id_detalle) 
+    from
+        detalle_venta dv1_0 
+    where
+        dv1_0.id_producto=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        venta v1_0 
+    where
+        v1_0.id_venta=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        detalle_venta dv1_0 
+    where
+        dv1_0.id_detalle=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    delete 
+    from
+        detalle_venta 
+    where
+        id_detalle=?
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        d1_0.id_venta,
+        d1_0.id_detalle,
+        d1_0.cantidad,
+        d1_0.precio_unitario,
+        d1_0.id_producto,
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        detalle_venta d1_0 
+    left join
+        producto p1_0 
+            on p1_0.id_producto=d1_0.id_producto 
+    left join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        d1_0.id_venta=?
+Hibernate: 
+    delete 
+    from
+        venta 
+    where
+        id_venta=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    delete 
+    from
+        producto 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    delete 
+    from
+        cliente 
+    where
+        id_cliente=?
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        count(*) 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+[INFO] Tests run: 18, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.837 s -- in com.ecocompra.tech.PersistenciaApiIntegrationTest
+[INFO] Running com.ecocompra.tech.RevisionHttpTest
+2026-11-24T18:46:23.890-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.RevisionHttpTest]: RevisionHttpTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:23.893-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.RevisionHttpTest
+2026-11-24T18:46:23.894-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.RevisionHttpTest]: RevisionHttpTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:23.896-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.RevisionHttpTest
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        lower(p1_0.nombre) like lower(('%'||?||'%')) escape '' 
+    order by
+        p1_0.nombre
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        lower(p1_0.reparabilidad) like lower(('%'||?||'%')) escape '' 
+    order by
+        p1_0.nombre
+[INFO] Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.139 s -- in com.ecocompra.tech.RevisionHttpTest
+[INFO] Running com.ecocompra.tech.SecurityApiIntegrationTest
+2026-11-24T18:46:24.030-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.SecurityApiIntegrationTest]: SecurityApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:24.034-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.SecurityApiIntegrationTest
+2026-11-24T18:46:24.036-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.SecurityApiIntegrationTest]: SecurityApiIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:24.038-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.SecurityApiIntegrationTest
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    delete 
+    from
+        producto 
+    where
+        id_producto=?
+Hibernate: 
+    delete 
+    from
+        producto 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    delete 
+    from
+        cliente 
+    where
+        id_cliente=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    delete 
+    from
+        cliente 
+    where
+        id_cliente=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+2026-11-24T18:46:24.756-05:00  WARN 31336 --- [ecocompra-tech-test] [           main] o.h.v.i.m.a.CascadingMetaDataBuilder     : HV000271: Using `@Valid` on a container (java.util.List) is deprecated. You should apply the annotation on the type argument(s). Affected element: detalles
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    insert 
+    into
+        venta
+        (id_cliente, fecha, id_venta) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        detalle_venta
+        (cantidad, precio_unitario, id_producto, id_venta, id_detalle) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0 
+    where
+        v1_0.id_venta=? 
+    for
+        update
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        d1_0.id_venta,
+        d1_0.id_detalle,
+        d1_0.cantidad,
+        d1_0.precio_unitario,
+        d1_0.id_producto,
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        detalle_venta d1_0 
+    left join
+        producto p1_0 
+            on p1_0.id_producto=d1_0.id_producto 
+    left join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        d1_0.id_venta=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    delete 
+    from
+        detalle_venta 
+    where
+        id_detalle=?
+Hibernate: 
+    insert 
+    into
+        detalle_venta
+        (cantidad, precio_unitario, id_producto, id_venta, id_detalle) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0 
+    where
+        dv1_0.id_venta=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0 
+    where
+        dv1_0.id_venta=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0 
+    where
+        v1_0.id_venta=? 
+    for
+        update
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        d1_0.id_venta,
+        d1_0.id_detalle,
+        d1_0.cantidad,
+        d1_0.precio_unitario,
+        d1_0.id_producto,
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        detalle_venta d1_0 
+    left join
+        producto p1_0 
+            on p1_0.id_producto=d1_0.id_producto 
+    left join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        d1_0.id_venta=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    delete 
+    from
+        detalle_venta 
+    where
+        id_detalle=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0 
+    where
+        v1_0.id_venta=? 
+    for
+        update
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        d1_0.id_venta,
+        d1_0.id_detalle,
+        d1_0.cantidad,
+        d1_0.precio_unitario,
+        d1_0.id_producto,
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        detalle_venta d1_0 
+    left join
+        producto p1_0 
+            on p1_0.id_producto=d1_0.id_producto 
+    left join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        d1_0.id_venta=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    delete 
+    from
+        detalle_venta 
+    where
+        id_detalle=?
+Hibernate: 
+    delete 
+    from
+        venta 
+    where
+        id_venta=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        venta v1_0 
+    where
+        v1_0.id_venta=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    delete 
+    from
+        producto 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    delete 
+    from
+        categoria 
+    where
+        id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    delete 
+    from
+        cliente 
+    where
+        id_cliente=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        dv1_0.id_detalle,
+        dv1_0.cantidad,
+        dv1_0.precio_unitario,
+        dv1_0.id_producto,
+        dv1_0.id_venta 
+    from
+        detalle_venta dv1_0
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.004 s -- in com.ecocompra.tech.SecurityApiIntegrationTest
+[INFO] Running com.ecocompra.tech.service.ClienteServiceTest
+2026-11-24T18:46:27.035-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.service.ClienteServiceTest]: ClienteServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:27.047-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.service.ClienteServiceTest
+2026-11-24T18:46:27.048-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.service.ClienteServiceTest]: ClienteServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:27.049-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.service.ClienteServiceTest
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.telefono=?
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        lower(c1_0.correo)=lower(?)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        lower(c1_0.nombre) like lower(('%'||?||'%')) escape '' 
+    order by
+        c1_0.nombre
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        count(v1_0.id_venta) 
+    from
+        venta v1_0 
+    where
+        v1_0.id_cliente=?
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente,
+        c1_0.correo,
+        c1_0.nombre,
+        c1_0.telefono 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    insert 
+    into
+        venta
+        (id_cliente, fecha, id_venta) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        detalle_venta
+        (cantidad, precio_unitario, id_producto, id_venta, id_detalle) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        count(v1_0.id_venta) 
+    from
+        venta v1_0 
+    where
+        v1_0.id_cliente=?
+[INFO] Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.084 s -- in com.ecocompra.tech.service.ClienteServiceTest
+[INFO] Running com.ecocompra.tech.service.ProductoServiceTest
+2026-11-24T18:46:27.120-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.service.ProductoServiceTest]: ProductoServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:27.121-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.service.ProductoServiceTest
+2026-11-24T18:46:27.121-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.service.ProductoServiceTest]: ProductoServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:27.122-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.service.ProductoServiceTest
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.precio between ? and ? 
+    order by
+        p1_0.precio
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_categoria=? 
+        and p1_0.stock>=? 
+    order by
+        p1_0.nombre
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre 
+    from
+        categoria c1_0 
+    where
+        c1_0.id_categoria=?
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        lower(p1_0.nombre) like lower(('%'||?||'%')) escape '' 
+    order by
+        p1_0.nombre
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.consumo_kwh is not null 
+        and p1_0.consumo_kwh<=? 
+    order by
+        p1_0.consumo_kwh
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        c1_0.id_categoria,
+        c1_0.descripcion,
+        c1_0.nombre,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    join
+        categoria c1_0 
+            on c1_0.id_categoria=p1_0.id_categoria 
+    where
+        p1_0.id_producto=?
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    insert 
+    into
+        venta
+        (id_cliente, fecha, id_venta) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        detalle_venta
+        (cantidad, precio_unitario, id_producto, id_venta, id_detalle) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        count(dv1_0.id_detalle) 
+    from
+        detalle_venta dv1_0 
+    where
+        dv1_0.id_producto=?
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        count(dv1_0.id_detalle) 
+    from
+        detalle_venta dv1_0 
+    where
+        dv1_0.id_producto=?
+[INFO] Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 s -- in com.ecocompra.tech.service.ProductoServiceTest
+[INFO] Running com.ecocompra.tech.service.VentaIntegrationTest
+2026-11-24T18:46:27.229-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.service.VentaIntegrationTest]: VentaIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:27.230-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.service.VentaIntegrationTest
+2026-11-24T18:46:27.231-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.service.VentaIntegrationTest]: VentaIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:27.232-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.service.VentaIntegrationTest
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    select
+        c1_0.id_categoria 
+    from
+        categoria c1_0 
+    where
+        upper(c1_0.nombre)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        categoria
+        (descripcion, nombre, id_categoria) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        producto
+        (id_categoria, condiciones_consumo, consumo_kwh, descripcion, fuente_tecnica, nombre, precio, reparabilidad, stock, vida_util_anios, id_producto) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        c1_0.id_cliente 
+    from
+        cliente c1_0 
+    where
+        upper(c1_0.correo)=upper(?) 
+    fetch
+        first ? rows only
+Hibernate: 
+    insert 
+    into
+        cliente
+        (correo, nombre, telefono, id_cliente) 
+    values
+        (?, ?, ?, default)
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    select
+        p1_0.id_producto,
+        p1_0.id_categoria,
+        p1_0.condiciones_consumo,
+        p1_0.consumo_kwh,
+        p1_0.descripcion,
+        p1_0.fuente_tecnica,
+        p1_0.nombre,
+        p1_0.precio,
+        p1_0.reparabilidad,
+        p1_0.stock,
+        p1_0.vida_util_anios 
+    from
+        producto p1_0 
+    where
+        p1_0.id_producto=? 
+    for
+        update
+Hibernate: 
+    insert 
+    into
+        venta
+        (id_cliente, fecha, id_venta) 
+    values
+        (?, ?, default)
+Hibernate: 
+    insert 
+    into
+        detalle_venta
+        (cantidad, precio_unitario, id_producto, id_venta, id_detalle) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        detalle_venta
+        (cantidad, precio_unitario, id_producto, id_venta, id_detalle) 
+    values
+        (?, ?, ?, ?, default)
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    update
+        producto 
+    set
+        id_categoria=?,
+        condiciones_consumo=?,
+        consumo_kwh=?,
+        descripcion=?,
+        fuente_tecnica=?,
+        nombre=?,
+        precio=?,
+        reparabilidad=?,
+        stock=?,
+        vida_util_anios=? 
+    where
+        id_producto=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        cliente c1_0 
+    where
+        c1_0.id_cliente=?
+Hibernate: 
+    select
+        v1_0.id_venta,
+        v1_0.id_cliente,
+        v1_0.fecha 
+    from
+        venta v1_0 
+    where
+        v1_0.id_cliente=?
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.041 s -- in com.ecocompra.tech.service.VentaIntegrationTest
+[INFO] Running com.ecocompra.tech.UsuariosIntegrationTest
+2026-11-24T18:46:27.271-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.UsuariosIntegrationTest]: UsuariosIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:27.273-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.UsuariosIntegrationTest
+2026-11-24T18:46:27.274-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.ecocompra.tech.UsuariosIntegrationTest]: UsuariosIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2026-11-24T18:46:27.276-05:00  INFO 31336 --- [ecocompra-tech-test] [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.ecocompra.tech.EcocompraTechApplication for test class com.ecocompra.tech.UsuariosIntegrationTest
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        count(*) 
+    from
+        usuario u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        upper(u1_0.username)=upper(?)
+Hibernate: 
+    select
+        count(*) 
+    from
+        usuario u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        upper(u1_0.username)=upper(?)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    update
+        usuario 
+    set
+        activo=?,
+        password_hash=?,
+        rol=?,
+        token_version=?,
+        username=? 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    update
+        usuario 
+    set
+        activo=?,
+        password_hash=?,
+        rol=?,
+        token_version=?,
+        username=? 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    update
+        usuario 
+    set
+        activo=?,
+        password_hash=?,
+        rol=?,
+        token_version=?,
+        username=? 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    delete 
+    from
+        usuario 
+    where
+        id=?
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    insert 
+    into
+        usuario
+        (activo, password_hash, rol, token_version, username, id) 
+    values
+        (?, ?, ?, ?, ?, default)
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    order by
+        u1_0.id 
+    for
+        update
+Hibernate: 
+    update
+        usuario 
+    set
+        activo=?,
+        password_hash=?,
+        rol=?,
+        token_version=?,
+        username=? 
+    where
+        id=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.activo,
+        u1_0.password_hash,
+        u1_0.rol,
+        u1_0.token_version,
+        u1_0.username 
+    from
+        usuario u1_0
+[INFO] Tests run: 17, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.774 s -- in com.ecocompra.tech.UsuariosIntegrationTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 93, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- jar:3.5.1:jar (default-jar) @ ecocompra-tech ---
+[INFO] Building jar: C:\Users\RogerAAG\Desktop\EcoCompra Tech\actividad05\ecocompra-tech\target\ecocompra-tech-0.0.1-SNAPSHOT.jar
+[INFO] 
+[INFO] --- spring-boot:4.1.2:repackage (repackage) @ ecocompra-tech ---
+[INFO] Loaded 50 auto-discovered prefixes for remote repository ow2-snapshot (prefixes-ow2-snapshot.txt)
+[INFO] Replacing main artifact C:\Users\RogerAAG\Desktop\EcoCompra Tech\actividad05\ecocompra-tech\target\ecocompra-tech-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+[INFO] The original artifact has been renamed to C:\Users\RogerAAG\Desktop\EcoCompra Tech\actividad05\ecocompra-tech\target\ecocompra-tech-0.0.1-SNAPSHOT.jar.original
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  24.861 s
+[INFO] Finished at: 2026-11-24T18:46:33-05:00
+[INFO] ------------------------------------------------------------------------

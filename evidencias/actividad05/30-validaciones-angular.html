@@ -1,0 +1,19 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0;padding:36px;background:white;color:#182b24;font:21px 'Segoe UI',sans-serif}h1{font-size:29px;margin:0 0 10px}p{font-size:18px;color:#44594e;margin:0 0 22px}pre{background:#f1f5f2;border:1px solid #d5dfd8;padding:20px;font:21px/1.4 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:19px}td,th{border:1px solid #d3ddd5;padding:10px;text-align:left}th{background:#e4ece6}h2{font-size:23px}</style><h1>Validaciones y mensajes de campo</h1><p>Extractos reales de core/form-validation.ts y core/field-error.ts</p><h2>Validaciones compartidas</h2><pre>import { AbstractControl, ValidationErrors } from '@angular/forms';
+export function notBlank(control: AbstractControl): ValidationErrors | null {
+  return typeof control.value === 'string' &amp;&amp; !control.value.trim() ? { blank: true } : null;
+}
+export function passwordBytes(control: AbstractControl): ValidationErrors | null {
+  return new TextEncoder().encode(control.value ?? '').length &gt; 72 ? { passwordBytes: true } : null;
+}
+</pre><h2>Actualizacion visual del campo</h2><pre>import { Component, Input, ChangeDetectionStrategy } from '@angular/core';
+import { AbstractControl } from '@angular/forms';
+@Component({
+  selector: 'app-field-error',
+  changeDetection: ChangeDetectionStrategy.Eager,
+  template: `@if (control &amp;&amp; control.invalid &amp;&amp; (control.touched || control.dirty)) {
+    &lt;p class="field-error" role="alert"&gt;{{ message() }}&lt;/p&gt;
+  }`,
+})
+export class FieldError {
+  @Input({ required: true }) control: AbstractControl | null = null;
+  @Input() label = 'El campo';</pre>

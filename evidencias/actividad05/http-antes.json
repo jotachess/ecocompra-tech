@@ -1,0 +1,1873 @@
+[
+  {
+    "metodo": "POST",
+    "ruta": "/api/auth/login",
+    "estado": 401,
+    "jwtAdjunto": false,
+    "solicitud": {
+      "username": "admin",
+      "password": "[omitido]"
+    },
+    "respuesta": {
+      "timestamp": "2026-11-24 18:43:03",
+      "status": 401,
+      "error": "Unauthorized",
+      "mensaje": "Usuario o contrasena incorrectos.",
+      "ruta": "/api/auth/login"
+    }
+  },
+  {
+    "metodo": "POST",
+    "ruta": "/api/auth/login",
+    "estado": 200,
+    "jwtAdjunto": false,
+    "solicitud": {
+      "username": "admin",
+      "password": "[omitido]"
+    },
+    "respuesta": {
+      "accessToken": "[omitido]",
+      "tokenType": "[omitido]",
+      "expiresIn": 1800,
+      "username": "admin",
+      "roles": [
+        "ADMIN"
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/ventas",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idVenta": 1,
+        "cliente": {
+          "idCliente": 1,
+          "nombre": "Laboratorio de ejemplo",
+          "correo": "laboratorio@example.com",
+          "telefono": "999000001"
+        },
+        "fecha": "2026-11-24 18:38:30",
+        "detalles": [
+          {
+            "idDetalle": 1,
+            "producto": {
+              "idProducto": 1,
+              "categoria": {
+                "idCategoria": 1,
+                "nombre": "Equipos de demostración",
+                "descripcion": "Datos ficticios para verificar las interfaces"
+              },
+              "nombre": "Laptop de demostración",
+              "descripcion": "Equipo de ejemplo para el catálogo inicial",
+              "precio": 1890,
+              "stock": 11,
+              "reparabilidad": null,
+              "consumoKwh": null,
+              "condicionesConsumo": null,
+              "vidaUtilAnios": null,
+              "fuenteTecnica": null
+            },
+            "cantidad": 1,
+            "precioUnitario": 1890
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      }
+    ]
+  },
+  {
+    "metodo": "POST",
+    "ruta": "/api/clientes",
+    "estado": 201,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "nombre": "Cliente Practica 05",
+      "correo": "practica05@example.com",
+      "telefono": "900000005"
+    },
+    "respuesta": {
+      "idCliente": 5,
+      "nombre": "Cliente Practica 05",
+      "correo": "practica05@example.com",
+      "telefono": "900000005"
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      },
+      {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000005"
+      }
+    ]
+  },
+  {
+    "metodo": "POST",
+    "ruta": "/api/clientes",
+    "estado": 409,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "nombre": "Cliente Duplicado 05",
+      "correo": "practica05@example.com",
+      "telefono": null
+    },
+    "respuesta": {
+      "timestamp": "2026-11-24 18:43:04",
+      "status": 409,
+      "error": "Conflicto de Operación o Integridad Referencial",
+      "mensaje": "Ya existe un cliente registrado con el correo: practica05@example.com",
+      "ruta": "/api/clientes"
+    }
+  },
+  {
+    "metodo": "PUT",
+    "ruta": "/api/clientes/5",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "nombre": "Cliente Practica 05",
+      "correo": "practica05@example.com",
+      "telefono": "900000055"
+    },
+    "respuesta": {
+      "idCliente": 5,
+      "nombre": "Cliente Practica 05",
+      "correo": "practica05@example.com",
+      "telefono": "900000055"
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      },
+      {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/categorias",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCategoria": 1,
+        "nombre": "Equipos de demostración",
+        "descripcion": "Datos ficticios para verificar las interfaces"
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "POST",
+    "ruta": "/api/productos",
+    "estado": 201,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "nombre": "Teclado Practica 05",
+      "idCategoria": 1,
+      "descripcion": "",
+      "precio": 150,
+      "stock": 10,
+      "reparabilidad": null,
+      "consumoKwh": null,
+      "condicionesConsumo": "",
+      "vidaUtilAnios": null,
+      "fuenteTecnica": null
+    },
+    "respuesta": {
+      "idProducto": 5,
+      "categoria": {
+        "idCategoria": 1,
+        "nombre": "Equipos de demostración",
+        "descripcion": "Datos ficticios para verificar las interfaces"
+      },
+      "nombre": "Teclado Practica 05",
+      "descripcion": "",
+      "precio": 150,
+      "stock": 10,
+      "reparabilidad": null,
+      "consumoKwh": null,
+      "condicionesConsumo": "",
+      "vidaUtilAnios": null,
+      "fuenteTecnica": null
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 5,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado Practica 05",
+        "descripcion": "",
+        "precio": 150,
+        "stock": 10,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": "",
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/categorias",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCategoria": 1,
+        "nombre": "Equipos de demostración",
+        "descripcion": "Datos ficticios para verificar las interfaces"
+      }
+    ]
+  },
+  {
+    "metodo": "PUT",
+    "ruta": "/api/productos/5",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "nombre": "Teclado Practica 05",
+      "idCategoria": 1,
+      "descripcion": "",
+      "precio": 155,
+      "stock": 10,
+      "reparabilidad": null,
+      "consumoKwh": null,
+      "condicionesConsumo": "",
+      "vidaUtilAnios": null,
+      "fuenteTecnica": null
+    },
+    "respuesta": {
+      "idProducto": 5,
+      "categoria": {
+        "idCategoria": 1,
+        "nombre": "Equipos de demostración",
+        "descripcion": "Datos ficticios para verificar las interfaces"
+      },
+      "nombre": "Teclado Practica 05",
+      "descripcion": "",
+      "precio": 155,
+      "stock": 10,
+      "reparabilidad": null,
+      "consumoKwh": null,
+      "condicionesConsumo": "",
+      "vidaUtilAnios": null,
+      "fuenteTecnica": null
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/categorias",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCategoria": 1,
+        "nombre": "Equipos de demostración",
+        "descripcion": "Datos ficticios para verificar las interfaces"
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 5,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado Practica 05",
+        "descripcion": "",
+        "precio": 155,
+        "stock": 10,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": "",
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      },
+      {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 5,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado Practica 05",
+        "descripcion": "",
+        "precio": 155,
+        "stock": 10,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": "",
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/ventas",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idVenta": 1,
+        "cliente": {
+          "idCliente": 1,
+          "nombre": "Laboratorio de ejemplo",
+          "correo": "laboratorio@example.com",
+          "telefono": "999000001"
+        },
+        "fecha": "2026-11-24 18:38:30",
+        "detalles": [
+          {
+            "idDetalle": 1,
+            "producto": {
+              "idProducto": 1,
+              "categoria": {
+                "idCategoria": 1,
+                "nombre": "Equipos de demostración",
+                "descripcion": "Datos ficticios para verificar las interfaces"
+              },
+              "nombre": "Laptop de demostración",
+              "descripcion": "Equipo de ejemplo para el catálogo inicial",
+              "precio": 1890,
+              "stock": 11,
+              "reparabilidad": null,
+              "consumoKwh": null,
+              "condicionesConsumo": null,
+              "vidaUtilAnios": null,
+              "fuenteTecnica": null
+            },
+            "cantidad": 1,
+            "precioUnitario": 1890
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metodo": "POST",
+    "ruta": "/api/ventas",
+    "estado": 409,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "idCliente": 5,
+      "detalles": [
+        {
+          "idProducto": 5,
+          "cantidad": 100,
+          "precioUnitario": null
+        }
+      ]
+    },
+    "respuesta": {
+      "timestamp": "2026-11-24 18:43:06",
+      "status": 409,
+      "error": "Conflicto de Operación o Integridad Referencial",
+      "mensaje": "Stock insuficiente para Teclado Practica 05",
+      "ruta": "/api/ventas"
+    }
+  },
+  {
+    "metodo": "POST",
+    "ruta": "/api/ventas",
+    "estado": 201,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "idCliente": 5,
+      "detalles": [
+        {
+          "idProducto": 5,
+          "cantidad": 2,
+          "precioUnitario": null
+        }
+      ]
+    },
+    "respuesta": {
+      "idVenta": 3,
+      "cliente": {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      },
+      "fecha": "2026-11-24 18:43:06",
+      "detalles": [
+        {
+          "idDetalle": 4,
+          "producto": {
+            "idProducto": 5,
+            "categoria": {
+              "idCategoria": 1,
+              "nombre": "Equipos de demostración",
+              "descripcion": "Datos ficticios para verificar las interfaces"
+            },
+            "nombre": "Teclado Practica 05",
+            "descripcion": "",
+            "precio": 155,
+            "stock": 8,
+            "reparabilidad": null,
+            "consumoKwh": null,
+            "condicionesConsumo": "",
+            "vidaUtilAnios": null,
+            "fuenteTecnica": null
+          },
+          "cantidad": 2,
+          "precioUnitario": 155
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      },
+      {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 5,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado Practica 05",
+        "descripcion": "",
+        "precio": 155,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": "",
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/ventas",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idVenta": 1,
+        "cliente": {
+          "idCliente": 1,
+          "nombre": "Laboratorio de ejemplo",
+          "correo": "laboratorio@example.com",
+          "telefono": "999000001"
+        },
+        "fecha": "2026-11-24 18:38:30",
+        "detalles": [
+          {
+            "idDetalle": 1,
+            "producto": {
+              "idProducto": 1,
+              "categoria": {
+                "idCategoria": 1,
+                "nombre": "Equipos de demostración",
+                "descripcion": "Datos ficticios para verificar las interfaces"
+              },
+              "nombre": "Laptop de demostración",
+              "descripcion": "Equipo de ejemplo para el catálogo inicial",
+              "precio": 1890,
+              "stock": 11,
+              "reparabilidad": null,
+              "consumoKwh": null,
+              "condicionesConsumo": null,
+              "vidaUtilAnios": null,
+              "fuenteTecnica": null
+            },
+            "cantidad": 1,
+            "precioUnitario": 1890
+          }
+        ]
+      },
+      {
+        "idVenta": 3,
+        "cliente": {
+          "idCliente": 5,
+          "nombre": "Cliente Practica 05",
+          "correo": "practica05@example.com",
+          "telefono": "900000055"
+        },
+        "fecha": "2026-11-24 18:43:06",
+        "detalles": [
+          {
+            "idDetalle": 4,
+            "producto": {
+              "idProducto": 5,
+              "categoria": {
+                "idCategoria": 1,
+                "nombre": "Equipos de demostración",
+                "descripcion": "Datos ficticios para verificar las interfaces"
+              },
+              "nombre": "Teclado Practica 05",
+              "descripcion": "",
+              "precio": 155,
+              "stock": 8,
+              "reparabilidad": null,
+              "consumoKwh": null,
+              "condicionesConsumo": "",
+              "vidaUtilAnios": null,
+              "fuenteTecnica": null
+            },
+            "cantidad": 2,
+            "precioUnitario": 155
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metodo": "PUT",
+    "ruta": "/api/ventas/3",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "idCliente": 5,
+      "detalles": [
+        {
+          "idProducto": 5,
+          "cantidad": 1,
+          "precioUnitario": 155
+        }
+      ]
+    },
+    "respuesta": {
+      "idVenta": 3,
+      "cliente": {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      },
+      "fecha": "2026-11-24 18:43:06",
+      "detalles": [
+        {
+          "idDetalle": 5,
+          "producto": {
+            "idProducto": 5,
+            "categoria": {
+              "idCategoria": 1,
+              "nombre": "Equipos de demostración",
+              "descripcion": "Datos ficticios para verificar las interfaces"
+            },
+            "nombre": "Teclado Practica 05",
+            "descripcion": "",
+            "precio": 155,
+            "stock": 9,
+            "reparabilidad": null,
+            "consumoKwh": null,
+            "condicionesConsumo": "",
+            "vidaUtilAnios": null,
+            "fuenteTecnica": null
+          },
+          "cantidad": 1,
+          "precioUnitario": 155
+        }
+      ]
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      },
+      {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 5,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado Practica 05",
+        "descripcion": "",
+        "precio": 155,
+        "stock": 9,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": "",
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/ventas",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idVenta": 1,
+        "cliente": {
+          "idCliente": 1,
+          "nombre": "Laboratorio de ejemplo",
+          "correo": "laboratorio@example.com",
+          "telefono": "999000001"
+        },
+        "fecha": "2026-11-24 18:38:30",
+        "detalles": [
+          {
+            "idDetalle": 1,
+            "producto": {
+              "idProducto": 1,
+              "categoria": {
+                "idCategoria": 1,
+                "nombre": "Equipos de demostración",
+                "descripcion": "Datos ficticios para verificar las interfaces"
+              },
+              "nombre": "Laptop de demostración",
+              "descripcion": "Equipo de ejemplo para el catálogo inicial",
+              "precio": 1890,
+              "stock": 11,
+              "reparabilidad": null,
+              "consumoKwh": null,
+              "condicionesConsumo": null,
+              "vidaUtilAnios": null,
+              "fuenteTecnica": null
+            },
+            "cantidad": 1,
+            "precioUnitario": 1890
+          }
+        ]
+      },
+      {
+        "idVenta": 3,
+        "cliente": {
+          "idCliente": 5,
+          "nombre": "Cliente Practica 05",
+          "correo": "practica05@example.com",
+          "telefono": "900000055"
+        },
+        "fecha": "2026-11-24 18:43:06",
+        "detalles": [
+          {
+            "idDetalle": 5,
+            "producto": {
+              "idProducto": 5,
+              "categoria": {
+                "idCategoria": 1,
+                "nombre": "Equipos de demostración",
+                "descripcion": "Datos ficticios para verificar las interfaces"
+              },
+              "nombre": "Teclado Practica 05",
+              "descripcion": "",
+              "precio": 155,
+              "stock": 9,
+              "reparabilidad": null,
+              "consumoKwh": null,
+              "condicionesConsumo": "",
+              "vidaUtilAnios": null,
+              "fuenteTecnica": null
+            },
+            "cantidad": 1,
+            "precioUnitario": 155
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      },
+      {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      }
+    ]
+  },
+  {
+    "metodo": "DELETE",
+    "ruta": "/api/clientes/5",
+    "estado": 409,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": {
+      "timestamp": "2026-11-24 18:43:06",
+      "status": 409,
+      "error": "Conflicto de Operación o Integridad Referencial",
+      "mensaje": "No se puede eliminar el cliente con ID 5 porque tiene 1 venta(s) registrada(s) (Regla ON DELETE RESTRICT).",
+      "ruta": "/api/clientes/5"
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 5,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado Practica 05",
+        "descripcion": "",
+        "precio": 155,
+        "stock": 9,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": "",
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/categorias",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCategoria": 1,
+        "nombre": "Equipos de demostración",
+        "descripcion": "Datos ficticios para verificar las interfaces"
+      }
+    ]
+  },
+  {
+    "metodo": "DELETE",
+    "ruta": "/api/productos/5",
+    "estado": 409,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": {
+      "timestamp": "2026-11-24 18:43:07",
+      "status": 409,
+      "error": "Conflicto de Operación o Integridad Referencial",
+      "mensaje": "No se puede eliminar el producto con ID 5 porque registra 1 detalle(s) de ventas asociadas (Regla ON DELETE RESTRICT).",
+      "ruta": "/api/productos/5"
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "id": 1,
+        "username": "admin",
+        "rol": "ADMIN",
+        "activo": true
+      },
+      {
+        "id": 2,
+        "username": "vendedor",
+        "rol": "VENDEDOR",
+        "activo": true
+      }
+    ]
+  },
+  {
+    "metodo": "POST",
+    "ruta": "/api/usuarios",
+    "estado": 201,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "username": "practica05",
+      "password": "[omitido]",
+      "rol": "VENDEDOR"
+    },
+    "respuesta": {
+      "id": 4,
+      "username": "practica05",
+      "rol": "VENDEDOR",
+      "activo": true
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "id": 1,
+        "username": "admin",
+        "rol": "ADMIN",
+        "activo": true
+      },
+      {
+        "id": 2,
+        "username": "vendedor",
+        "rol": "VENDEDOR",
+        "activo": true
+      },
+      {
+        "id": 4,
+        "username": "practica05",
+        "rol": "VENDEDOR",
+        "activo": true
+      }
+    ]
+  },
+  {
+    "metodo": "POST",
+    "ruta": "/api/usuarios",
+    "estado": 409,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "username": "practica05",
+      "password": "[omitido]",
+      "rol": "VENDEDOR"
+    },
+    "respuesta": {
+      "timestamp": "2026-11-24 18:43:07",
+      "status": 409,
+      "error": "Conflicto de Operación o Integridad Referencial",
+      "mensaje": "Ya existe un usuario con ese nombre.",
+      "ruta": "/api/usuarios"
+    }
+  },
+  {
+    "metodo": "PUT",
+    "ruta": "/api/usuarios/4",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "rol": "ADMIN",
+      "activo": true
+    },
+    "respuesta": {
+      "id": 4,
+      "username": "practica05",
+      "rol": "ADMIN",
+      "activo": true
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "id": 1,
+        "username": "admin",
+        "rol": "ADMIN",
+        "activo": true
+      },
+      {
+        "id": 2,
+        "username": "vendedor",
+        "rol": "VENDEDOR",
+        "activo": true
+      },
+      {
+        "id": 4,
+        "username": "practica05",
+        "rol": "ADMIN",
+        "activo": true
+      }
+    ]
+  },
+  {
+    "metodo": "PUT",
+    "ruta": "/api/usuarios/4",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "rol": "VENDEDOR",
+      "activo": true
+    },
+    "respuesta": {
+      "id": 4,
+      "username": "practica05",
+      "rol": "VENDEDOR",
+      "activo": true
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "id": 1,
+        "username": "admin",
+        "rol": "ADMIN",
+        "activo": true
+      },
+      {
+        "id": 2,
+        "username": "vendedor",
+        "rol": "VENDEDOR",
+        "activo": true
+      },
+      {
+        "id": 4,
+        "username": "practica05",
+        "rol": "VENDEDOR",
+        "activo": true
+      }
+    ]
+  },
+  {
+    "metodo": "PUT",
+    "ruta": "/api/usuarios/4",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "rol": "VENDEDOR",
+      "activo": false
+    },
+    "respuesta": {
+      "id": 4,
+      "username": "practica05",
+      "rol": "VENDEDOR",
+      "activo": false
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "id": 1,
+        "username": "admin",
+        "rol": "ADMIN",
+        "activo": true
+      },
+      {
+        "id": 2,
+        "username": "vendedor",
+        "rol": "VENDEDOR",
+        "activo": true
+      },
+      {
+        "id": 4,
+        "username": "practica05",
+        "rol": "VENDEDOR",
+        "activo": false
+      }
+    ]
+  },
+  {
+    "metodo": "PUT",
+    "ruta": "/api/usuarios/4",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "rol": "VENDEDOR",
+      "activo": true
+    },
+    "respuesta": {
+      "id": 4,
+      "username": "practica05",
+      "rol": "VENDEDOR",
+      "activo": true
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/usuarios",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "id": 1,
+        "username": "admin",
+        "rol": "ADMIN",
+        "activo": true
+      },
+      {
+        "id": 2,
+        "username": "vendedor",
+        "rol": "VENDEDOR",
+        "activo": true
+      },
+      {
+        "id": 4,
+        "username": "practica05",
+        "rol": "VENDEDOR",
+        "activo": true
+      }
+    ]
+  },
+  {
+    "metodo": "PUT",
+    "ruta": "/api/usuarios/1",
+    "estado": 409,
+    "jwtAdjunto": true,
+    "solicitud": {
+      "rol": "ADMIN",
+      "activo": false
+    },
+    "respuesta": {
+      "timestamp": "2026-11-24 18:43:08",
+      "status": 409,
+      "error": "Conflicto de Operación o Integridad Referencial",
+      "mensaje": "No puede desactivar, eliminar ni quitar el rol ADMIN de su propia cuenta.",
+      "ruta": "/api/usuarios/1"
+    }
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/productos",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idProducto": 1,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Laptop de demostración",
+        "descripcion": "Equipo de ejemplo para el catálogo inicial",
+        "precio": 1890,
+        "stock": 11,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 2,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Monitor de demostración",
+        "descripcion": "Pantalla de ejemplo",
+        "precio": 640,
+        "stock": 8,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 3,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado de demostración",
+        "descripcion": "Accesorio de ejemplo",
+        "precio": 120,
+        "stock": 15,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": null,
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      },
+      {
+        "idProducto": 5,
+        "categoria": {
+          "idCategoria": 1,
+          "nombre": "Equipos de demostración",
+          "descripcion": "Datos ficticios para verificar las interfaces"
+        },
+        "nombre": "Teclado Practica 05",
+        "descripcion": "",
+        "precio": 155,
+        "stock": 9,
+        "reparabilidad": null,
+        "consumoKwh": null,
+        "condicionesConsumo": "",
+        "vidaUtilAnios": null,
+        "fuenteTecnica": null
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      },
+      {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/ventas",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idVenta": 1,
+        "cliente": {
+          "idCliente": 1,
+          "nombre": "Laboratorio de ejemplo",
+          "correo": "laboratorio@example.com",
+          "telefono": "999000001"
+        },
+        "fecha": "2026-11-24 18:38:30",
+        "detalles": [
+          {
+            "idDetalle": 1,
+            "producto": {
+              "idProducto": 1,
+              "categoria": {
+                "idCategoria": 1,
+                "nombre": "Equipos de demostración",
+                "descripcion": "Datos ficticios para verificar las interfaces"
+              },
+              "nombre": "Laptop de demostración",
+              "descripcion": "Equipo de ejemplo para el catálogo inicial",
+              "precio": 1890,
+              "stock": 11,
+              "reparabilidad": null,
+              "consumoKwh": null,
+              "condicionesConsumo": null,
+              "vidaUtilAnios": null,
+              "fuenteTecnica": null
+            },
+            "cantidad": 1,
+            "precioUnitario": 1890
+          }
+        ]
+      },
+      {
+        "idVenta": 3,
+        "cliente": {
+          "idCliente": 5,
+          "nombre": "Cliente Practica 05",
+          "correo": "practica05@example.com",
+          "telefono": "900000055"
+        },
+        "fecha": "2026-11-24 18:43:06",
+        "detalles": [
+          {
+            "idDetalle": 5,
+            "producto": {
+              "idProducto": 5,
+              "categoria": {
+                "idCategoria": 1,
+                "nombre": "Equipos de demostración",
+                "descripcion": "Datos ficticios para verificar las interfaces"
+              },
+              "nombre": "Teclado Practica 05",
+              "descripcion": "",
+              "precio": 155,
+              "stock": 9,
+              "reparabilidad": null,
+              "consumoKwh": null,
+              "condicionesConsumo": "",
+              "vidaUtilAnios": null,
+              "fuenteTecnica": null
+            },
+            "cantidad": 1,
+            "precioUnitario": 155
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "metodo": "GET",
+    "ruta": "/api/clientes",
+    "estado": 200,
+    "jwtAdjunto": true,
+    "solicitud": null,
+    "respuesta": [
+      {
+        "idCliente": 1,
+        "nombre": "Laboratorio de ejemplo",
+        "correo": "laboratorio@example.com",
+        "telefono": "999000001"
+      },
+      {
+        "idCliente": 2,
+        "nombre": "Cliente de demostración",
+        "correo": "cliente@example.com",
+        "telefono": null
+      },
+      {
+        "idCliente": 5,
+        "nombre": "Cliente Practica 05",
+        "correo": "practica05@example.com",
+        "telefono": "900000055"
+      }
+    ]
+  }
+]
