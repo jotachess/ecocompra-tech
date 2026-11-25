@@ -1,0 +1,9 @@
+{
+  "name": "ecocompra-pruebas-funcionales",
+  "private": true,
+  "scripts": {
+    "antes": "node actividad05.cjs antes", "despues": "node actividad05.cjs despues",
+    "seguridad": "node seguridad.cjs", "errores": "node errores.cjs"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}

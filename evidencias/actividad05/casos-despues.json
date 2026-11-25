@@ -1,0 +1,107 @@
+[
+  {
+    "id": "P-clientes",
+    "prueba": "Persistencia de clientes tras reinicio",
+    "esperado": "Mismo ID y valores guardados",
+    "obtenido": "HTTP 200, ID 5",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "P-productos",
+    "prueba": "Persistencia de productos tras reinicio",
+    "esperado": "Mismo ID y valores guardados",
+    "obtenido": "HTTP 200, ID 5",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "P-ventas",
+    "prueba": "Persistencia de ventas tras reinicio",
+    "esperado": "Mismo ID y valores guardados",
+    "obtenido": "HTTP 200, ID 3",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "P-usuarios",
+    "prueba": "Persistencia de usuarios tras reinicio",
+    "esperado": "Mismo ID y valores guardados",
+    "obtenido": "HTTP 200, ID 4",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D01",
+    "prueba": "Eliminar venta de prueba",
+    "esperado": "HTTP 204",
+    "obtenido": "HTTP 204",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D02",
+    "prueba": "Eliminar venta restituye stock",
+    "esperado": "Stock vuelve a 10",
+    "obtenido": "Stock 10",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D03",
+    "prueba": "Eliminar producto libre de ventas",
+    "esperado": "HTTP 204",
+    "obtenido": "HTTP 204",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D04",
+    "prueba": "Eliminar cliente libre de ventas",
+    "esperado": "HTTP 204",
+    "obtenido": "HTTP 204",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D05",
+    "prueba": "Eliminar usuario de prueba",
+    "esperado": "HTTP 204",
+    "obtenido": "HTTP 204",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D06",
+    "prueba": "Usuario eliminado pierde acceso",
+    "esperado": "401 con JWT anterior",
+    "obtenido": "HTTP 401",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D-clientes",
+    "prueba": "Consultar clientes después de DELETE",
+    "esperado": "HTTP 404",
+    "obtenido": "HTTP 404",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D-productos",
+    "prueba": "Consultar productos después de DELETE",
+    "esperado": "HTTP 404",
+    "obtenido": "HTTP 404",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D-ventas",
+    "prueba": "Consultar ventas después de DELETE",
+    "esperado": "HTTP 404",
+    "obtenido": "HTTP 404",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "D-usuarios",
+    "prueba": "Consultar usuarios después de DELETE",
+    "esperado": "HTTP 404",
+    "obtenido": "HTTP 404",
+    "resultado": "Correcto"
+  },
+  {
+    "id": "JS-despues",
+    "prueba": "Sin errores JavaScript en el recorrido despues",
+    "esperado": "Cero excepciones de página",
+    "obtenido": "0 errores",
+    "resultado": "Correcto"
+  }
+]

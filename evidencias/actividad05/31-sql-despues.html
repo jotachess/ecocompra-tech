@@ -1,0 +1,19 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0;padding:36px;background:white;color:#182b24;font:21px 'Segoe UI',sans-serif}h1{font-size:29px;margin:0 0 10px}p{font-size:18px;color:#44594e;margin:0 0 22px}pre{background:#f1f5f2;border:1px solid #d5dfd8;padding:20px;font:21px/1.4 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:19px}td,th{border:1px solid #d3ddd5;padding:10px;text-align:left}th{background:#e4ece6}h2{font-size:23px}</style><h1>Consulta directa a la base de datos</h1><p>Salida real de H2 Shell | despues | Claves y hashes excluidos</p><pre>ID | USERNAME   | ROL      | ACTIVO | TOKEN_VERSION
+4  | practica05 | VENDEDOR | TRUE   | 4
+(1 row, 7 ms)
+USERNAME   | PROTECCION
+practica05 | BCrypt
+(1 row, 1 ms)
+ID_CLIENTE | NOMBRE              | CORREO                 | TELEFONO
+5          | Cliente Practica 05 | practica05@example.com | 900000055
+(1 row, 1 ms)
+ID_PRODUCTO | NOMBRE              | PRECIO | STOCK
+5           | Teclado Practica 05 | 155.00 | 9
+(1 row, 2 ms)
+ID_VENTA | ID_CLIENTE | ID_PRODUCTO | CANTIDAD | PRECIO_UNITARIO
+3        | 5          | 5           | 1        | 155.00
+(1 row, 3 ms)
+VENTAS_CON_CANTIDAD_RECHAZADA
+0
+(1 row, 5 ms)
+</pre>

@@ -1,0 +1,27 @@
+> Building...
+√ Building...
+Initial chunk files | Names         |  Raw size | Estimated transfer size
+main-KURONKQN.js    | main          | 276.97 kB |                76.22 kB
+styles-PTV2RSZY.css | styles        |  12.65 kB |                 2.94 kB
+
+                    | Initial total | 289.62 kB |                79.16 kB
+
+Lazy chunk files    | Names         |  Raw size | Estimated transfer size
+chunk-z9uZPZ4C.js   | -             |  51.72 kB |                10.68 kB
+chunk-hTOZiI5x.js   | productos     |  11.36 kB |                 3.60 kB
+chunk-DUhiL14C.js   | ventas        |   9.88 kB |                 3.23 kB
+chunk-Dmsg-E1s.js   | usuarios      |   7.80 kB |                 2.74 kB
+chunk-B31aMqsu.js   | clientes      |   6.83 kB |                 2.39 kB
+chunk-DpbdQH1w.js   | inicio        |   4.39 kB |                 1.73 kB
+chunk-CV19wQdj.js   | login         |   3.54 kB |                 1.55 kB
+chunk-SMak8dFB.js   | -             |   1.27 kB |               650 bytes
+chunk--xArvb39.js   | -             | 601 bytes |               601 bytes
+chunk-DHTbgC0L.js   | -             | 522 bytes |               522 bytes
+chunk-CgyAhcuk.js   | -             | 467 bytes |               467 bytes
+chunk-WWkfm9kq.js   | -             | 465 bytes |               465 bytes
+chunk-CPjv_Yeu.js   | -             | 194 bytes |               194 bytes
+
+Application bundle generation complete. [4.689 seconds] - 2026-11-24T23:46:13.148Z
+
+Output location: C:\Users\RogerAAG\Desktop\EcoCompra Tech\actividad05\ecocompra-tech\frontend\dist\frontend
+

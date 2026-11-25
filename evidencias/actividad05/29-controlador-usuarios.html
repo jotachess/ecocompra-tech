@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8"><style>body{margin:0;padding:36px;background:white;color:#182b24;font:21px 'Segoe UI',sans-serif}h1{font-size:29px;margin:0 0 10px}p{font-size:18px;color:#44594e;margin:0 0 22px}pre{background:#f1f5f2;border:1px solid #d5dfd8;padding:20px;font:21px/1.4 Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:19px}td,th{border:1px solid #d3ddd5;padding:10px;text-align:left}th{background:#e4ece6}h2{font-size:23px}</style><h1>Endpoints del modulo Usuarios</h1><p>Vista del archivo fuente real UsuarioController.java</p><pre>package com.ecocompra.tech.security;
+
+import java.net.URI;
+import java.util.List;
+import jakarta.validation.Valid;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.oauth2.jwt.Jwt;
+import org.springframework.web.bind.annotation.*;
+import lombok.RequiredArgsConstructor;
+
+@RestController @RequestMapping("/api/usuarios") @RequiredArgsConstructor
+public class UsuarioController {
+    private final UsuarioService usuarios;
+    @GetMapping public List&lt;UsuarioDtos.Respuesta&gt; index() { return usuarios.listar(); }
+    @GetMapping("/{id}") public UsuarioDtos.Respuesta show(@PathVariable Long id) { return usuarios.obtener(id); }
+    @PostMapping public ResponseEntity&lt;UsuarioDtos.Respuesta&gt; create(@Valid @RequestBody UsuarioDtos.Crear dto) {
+        var u=usuarios.crear(dto);return ResponseEntity.created(URI.create("/api/usuarios/"+u.id())).body(u);
+    }
+    @PutMapping("/{id}") public UsuarioDtos.Respuesta update(@PathVariable Long id,
+            @Valid @RequestBody UsuarioDtos.Actualizar dto,@AuthenticationPrincipal Jwt jwt) {
+        return usuarios.actualizar(id,dto,jwt.getSubject());
+    }
+    @DeleteMapping("/{id}") public ResponseEntity&lt;Void&gt; delete(@PathVariable Long id,@AuthenticationPrincipal Jwt jwt) {
+        usuarios.eliminar(id,jwt.getSubject());return ResponseEntity.noContent().build();
+    }
+}
+</pre>

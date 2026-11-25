@@ -1,0 +1,36 @@
+<div class="page-heading"><div><p class="eyebrow">CONTROL DE ACCESO</p><h1>Usuarios</h1>
+<p class="muted">Administra las cuentas y los permisos del sistema.</p></div><span class="count-tag">{{ rows().length }} usuarios</span></div>
+@if (error()) { <div class="alert error" role="alert">{{ error() }}</div> }
+@if (notice()) { <div class="alert success" role="status">{{ notice() }}</div> }
+<div class="resource-grid">
+ <section class="panel"><div class="panel-heading"><h2>Cuentas del sistema</h2></div>
+ <div class="table-scroll"><table><thead><tr><th>Usuario</th><th>Rol</th><th>Estado</th><th>Acciones</th></tr></thead><tbody>
+ @for (u of rows(); track u.id) {
+ <tr><td><strong>{{ u.username }}</strong><small>Cuenta #{{ u.id }}</small></td><td>{{ u.rol }}</td>
+ <td><span class="badge" [class.low]="!u.activo">{{ u.activo ? 'Activo' : 'Inactivo' }}</span></td>
+ <td class="actions"><button type="button" [disabled]="busy()" (click)="edit(u)">Editar</button>
+ @if (u.username !== auth.user()) {
+ <button class="danger-text" type="button" [disabled]="busy()" (click)="pendingDelete.set(u.id)">Eliminar</button>
+ @if (pendingDelete() === u.id) { <div class="confirm">¿Eliminar esta cuenta?
+ <button type="button" [disabled]="busy()" (click)="remove(u.id)">Confirmar</button>
+ <button type="button" (click)="pendingDelete.set(null)">Cancelar</button></div> }
+ }</td></tr>
+ } @empty { <tr><td colspan="4" class="empty">No hay cuentas disponibles.</td></tr> }
+ </tbody></table></div></section>
+ <section class="panel form-panel"><p class="eyebrow">ACCESO SEGÚN EL ROL</p><h2>{{ editing() ? 'Editar usuario' : 'Nuevo usuario' }}</h2>
+ <form [formGroup]="form" (ngSubmit)="save()">
+ <label for="un">Usuario *</label><input id="un" formControlName="username" maxlength="80" autocomplete="off" />
+ <app-field-error [control]="form.controls.username" label="El usuario" />
+ <p class="note">De 3 a 80 caracteres: minúsculas, números, punto, guion o guion bajo. El nombre no se modifica después del alta.</p>
+ @if (!editing()) {
+ <label for="up">Contraseña inicial *</label><input id="up" type="password" formControlName="password" maxlength="72" autocomplete="new-password" />
+ <app-field-error [control]="form.controls.password" label="La contraseña" />
+ <p class="note">Entre 12 y 72 caracteres y como máximo 72 bytes UTF-8. La contraseña se guarda protegida mediante hash BCrypt.</p>
+ }
+ <label for="ur">Rol *</label><select id="ur" formControlName="rol"><option value="VENDEDOR">VENDEDOR</option><option value="ADMIN">ADMIN</option></select>
+ @if (editing()) { <label for="ua">Estado</label><select id="ua" formControlName="activo"><option [ngValue]="true">Activo</option><option [ngValue]="false">Inactivo</option></select>
+ <p class="note">Cambiar el rol o el estado invalida las sesiones anteriores de esa cuenta. No puedes desactivar tu propia cuenta ni quitarte el rol ADMIN.</p> }
+ <div class="form-actions"><button class="primary" type="submit" [disabled]="form.invalid || busy()">{{ busy() ? 'Guardando…' : 'Guardar usuario' }}</button>
+ <button class="secondary" type="button" (click)="reset()">{{ editing() ? 'Cancelar' : 'Limpiar' }}</button></div>
+ </form></section>
+</div>

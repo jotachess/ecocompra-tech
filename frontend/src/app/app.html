@@ -1,0 +1,52 @@
+@if (auth.authenticated()) {
+  <div class="workspace">
+    <aside class="sidebar">
+      <a class="brand" routerLink="/inicio"
+        ><span class="brand-mark">e</span
+        ><span>EcoCompra<span class="brand-light">Tech</span></span></a
+      >
+      <p class="nav-label">ESPACIO DE TRABAJO</p>
+      <nav aria-label="Navegación principal">
+        <a routerLink="/inicio" routerLinkActive="active"><span>◫</span>Inicio</a>
+        <a routerLink="/productos" routerLinkActive="active"><span>▦</span>Productos</a>
+        <a routerLink="/clientes" routerLinkActive="active"><span>♧</span>Clientes</a>
+        <a routerLink="/ventas" routerLinkActive="active"><span>↗</span>Ventas</a>
+        @if (auth.admin()) { <a routerLink="/usuarios" routerLinkActive="active"><span>♙</span>Usuarios</a> }
+      </nav>
+      <div class="sidebar-note">
+        <span class="leaf">↗</span><strong>Decisiones con criterio</strong>
+        <p>Reparabilidad, energía y vida útil en un mismo catálogo.</p>
+      </div>
+      <div class="account">
+        <span class="avatar">{{ auth.user().slice(0, 1).toUpperCase() }}</span>
+        <div>
+          <strong>{{ auth.user() }}</strong
+          ><small>{{ auth.role() }}</small>
+        </div>
+        <button
+          class="exit"
+          type="button"
+          (click)="logout()"
+          aria-label="Cerrar sesión"
+          title="Cerrar sesión"
+        >
+          ↪
+        </button>
+      </div>
+    </aside>
+    <div class="main-area">
+      <header class="topbar">
+        <span>Sistema de compras tecnológicas sostenibles</span
+        ><span class="connection"><i></i> Sesión activa</span>
+      </header>
+      <main id="contenido"><router-outlet /></main>
+      <footer class="app-footer">
+        EcoCompra Tech · Grupo 02
+        <span>Soluciones Web y Aplicaciones Distribuidas · Actividad 05</span>
+      </footer>
+    </div>
+  </div>
+} @else {
+  <router-outlet />
+}
+

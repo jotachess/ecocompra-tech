@@ -1,0 +1,79 @@
+<div class="page-heading">
+  <div>
+    <p class="eyebrow">PANORAMA GENERAL</p>
+    <h1>Hola, {{ auth.user() }}<span class="heading-dot">.</span></h1>
+    <p class="muted">Este es el estado actual de tu espacio de compras.</p>
+  </div>
+  <a class="primary" routerLink="/productos">Explorar catálogo <span>↗</span></a>
+</div>
+@if (error()) {
+  <div class="alert error" role="alert">{{ error() }}</div>
+}
+@if (loading()) {
+  <p class="muted" role="status">Cargando el resumen…</p>
+}
+<section class="stats">
+  <article>
+    <span class="stat-icon">▦</span>
+    <p>Productos en catálogo</p>
+    <strong>{{ productos().length }}</strong
+    ><small>Equipos y accesorios registrados</small>
+  </article>
+  <article>
+    <span class="stat-icon">♧</span>
+    <p>Clientes registrados</p>
+    <strong>{{ clientes().length }}</strong
+    ><small>Contactos de tu organización</small>
+  </article>
+  <article>
+    <span class="stat-icon">↗</span>
+    <p>Ventas registradas</p>
+    <strong>{{ ventas().length }}</strong
+    ><small>Operaciones disponibles para consulta</small>
+  </article>
+</section>
+<section class="purpose-banner">
+  <div>
+    <p class="eyebrow">COMPRAR MEJOR EMPIEZA POR CONOCER</p>
+    <h2>Más información.<br />Mejores decisiones.</h2>
+    <p>Documenta los criterios técnicos antes de comparar alternativas.</p>
+    <a routerLink="/productos" class="text-link">Consultar los productos →</a>
+  </div>
+  <div class="purpose-orbit">
+    <span class="orbit-core">e</span><span>Reparabilidad</span><span>Consumo energético</span
+    ><span>Vida útil</span>
+  </div>
+</section>
+<section class="content-grid">
+  <article class="panel">
+    <div class="panel-heading">
+      <h2>Vista del catálogo</h2>
+      <a routerLink="/productos">Ver todos →</a>
+    </div>
+    @for (p of productos().slice(0, 3); track p.idProducto) {
+      <div class="preview-row">
+        <span class="product-icon">▦</span>
+        <div>
+          <strong>{{ p.nombre }}</strong
+          ><small>{{ p.categoria.nombre }}</small>
+        </div>
+        <b>{{ p.precio | currency: 'PEN' : 'S/ ' : '1.2-2' }}</b>
+      </div>
+    } @empty {
+      <p class="empty">El catálogo está vacío. Registra el primer producto.</p>
+    }
+  </article>
+  <article class="panel criteria-panel">
+    <p class="eyebrow">INFORMACIÓN SOSTENIBLE</p>
+    <h2>El respaldo técnico cuenta</h2>
+    <p class="muted">
+      {{ documentados() }} de {{ productos().length }} productos tienen una fuente técnica
+      registrada.
+    </p>
+    <p class="note">
+      Un campo vacío significa que el dato aún debe documentarse. El sistema no atribuye beneficios
+      ambientales sin respaldo.
+    </p>
+    <a class="text-link" routerLink="/productos">Revisar la información →</a>
+  </article>
+</section>

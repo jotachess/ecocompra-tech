@@ -1,0 +1,56 @@
+<main class="login-page">
+  <section class="login-story">
+    <div class="brand">
+      <span class="brand-mark">e</span><span>EcoCompra<span class="brand-light">Tech</span></span>
+    </div>
+    <div class="story-content">
+      <p class="eyebrow">COMPRAS CON VISIÓN DE FUTURO</p>
+      <h1>La tecnología cambia.<br />Tus criterios<br />hacen la diferencia.</h1>
+      <p>
+        Organiza productos, clientes y ventas con la información que necesitas para tomar mejores
+        decisiones.
+      </p>
+      <div class="criteria">
+        <div><b>01</b><span>Reparabilidad</span></div>
+        <div><b>02</b><span>Energía</span></div>
+        <div><b>03</b><span>Vida útil</span></div>
+      </div>
+    </div>
+    <p class="story-footer">ODS 9 · Industria, innovación e infraestructura</p>
+  </section>
+  <section class="login-form-area">
+    <div class="login-box">
+      <span class="tag">BIENVENIDO A TU ESPACIO</span>
+      <h2>Inicia sesión</h2>
+      <p class="muted">Accede con la cuenta proporcionada por tu administrador.</p>
+      <form [formGroup]="form" (ngSubmit)="submit()">
+        <label for="username">Usuario</label
+        ><input
+          id="username"
+          formControlName="username"
+          autocomplete="username"
+          placeholder="Tu nombre de usuario"
+          maxlength="80"
+        /><label for="password">Contraseña</label
+        ><input
+          id="password"
+          type="password"
+          formControlName="password"
+          autocomplete="current-password"
+          placeholder="Tu contraseña"
+          maxlength="72"
+        />
+        @if (error()) {
+          <div class="alert error" role="alert">{{ error() }}</div>
+        }
+        <button class="primary wide" [disabled]="form.invalid || busy()" type="submit">
+          {{ busy() ? 'Verificando…' : 'Entrar al sistema' }} <span>→</span>
+        </button>
+      </form>
+      <div class="login-note">
+        <span class="status-dot"></span>Acceso según el rol asignado a tu cuenta.
+      </div>
+    </div>
+    <small class="login-copyright">EcoCompra Tech · Grupo 02 · 2026</small>
+  </section>
+</main>
